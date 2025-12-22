@@ -1,0 +1,291 @@
+/* Wishlist Page Styles */
+
+/* Main Container */
+.wishlist-section {
+   padding: 40px 20px;
+   background-color: #fff;
+   min-height: 500px;
+   font-family: "Inter", sans-serif;
+}
+
+.wishlist-container {
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+/* Header Row (Yellow) */
+.wishlist-header-row {
+   display: grid;
+   grid-template-columns: 3fr 1fr 1.5fr 1fr 1.5fr;
+   /* Product | Price | Date | Stock | Action */
+   background-color: #f6cc45;
+   /* Yellow Brand Color */
+   padding: 16px 20px;
+   border-radius: 8px 8px 0 0;
+   font-family: "Poppins", sans-serif;
+   font-weight: 600;
+   color: #111;
+   align-items: center;
+   margin-left: 40px;
+   /* Space for remove button in items */
+}
+
+/* Wishlist Item Row */
+.wishlist-item {
+   display: grid;
+   grid-template-columns: 40px 3fr 1fr 1.5fr 1fr 1.5fr;
+   /* X | Product | Price | Date | Stock | Action */
+   padding: 24px 20px;
+   border-bottom: 1px solid #f0f0f0;
+   align-items: center;
+   background-color: #fff;
+   transition: background-color 0.2s;
+}
+
+.wishlist-item:hover {
+   background-color: #fafafa;
+}
+
+/* Remove Icon (X) */
+.remove-icon {
+   background: none;
+   border: none;
+   font-size: 24px;
+   color: #333;
+   cursor: pointer;
+   padding: 0;
+   line-height: 1;
+   text-align: left;
+}
+
+.remove-icon:hover {
+   color: #d32f2f;
+}
+
+/* Product Info Column */
+.col-product {
+   display: flex;
+   align-items: center;
+   gap: 16px;
+}
+
+.product-thumb {
+   width: 60px;
+   height: 60px;
+   border-radius: 6px;
+   border: 1px solid #eee;
+   padding: 4px;
+   background: #fff;
+}
+
+.product-thumb img {
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+}
+
+.product-meta {
+   display: flex;
+   flex-direction: column;
+}
+
+.product-name {
+   font-family: "Poppins", sans-serif;
+   font-weight: 600;
+   color: #333;
+   font-size: 15px;
+}
+
+.product-weight {
+   font-size: 13px;
+   color: #888;
+   margin-top: 4px;
+}
+
+/* Other Columns */
+.col-price {
+   font-weight: 600;
+   color: #333;
+}
+
+.col-date {
+   color: #666;
+   font-size: 14px;
+}
+
+.col-stock {
+   font-weight: 500;
+   font-size: 14px;
+}
+
+.col-stock.instock {
+   color: #1f7a45;
+   /* Success Green */
+}
+
+.col-stock.outstock {
+   color: #d32f2f;
+}
+
+/* Add to Cart Button */
+.add-cart-btn {
+   background-color: #1f7a45;
+   color: white;
+   border: none;
+   padding: 10px 20px;
+   border-radius:40px;
+   /* Rounded pill shape from design options */
+   font-family: "Poppins", sans-serif;
+   font-weight: 500;
+   font-size: 14px;
+   cursor: pointer;
+   transition: background 0.2s;
+   white-space: nowrap;
+}
+
+.add-cart-btn:hover {
+   background-color: #166037;
+}
+
+/* Footer Actions */
+.wishlist-footer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 40px;
+   padding-top: 20px;
+}
+
+.share-section {
+   display: flex;
+   align-items: center;
+   gap: 12px;
+}
+
+.share-label {
+   font-weight: 600;
+   color: #333;
+   text-decoration: underline;
+}
+
+.share-input-group {
+   display: flex;
+   align-items: center;
+   border: 1px solid #ccc;
+   border-radius: 20px;
+   /* Fully rounded */
+   overflow: hidden;
+   padding: 2px;
+}
+
+.share-link-input {
+   border: none;
+   padding: 8px 16px;
+   font-size: 14px;
+   color: #555;
+   width: 220px;
+   outline: none;
+}
+
+.copy-link-btn {
+   background-color: #1f7a45;
+   color: white;
+   border: none;
+   padding: 8px 16px;
+   border-radius: 20px;
+   font-size: 13px;
+   font-weight: 600;
+   cursor: pointer;
+}
+
+.bulk-actions {
+   display: flex;
+   align-items: center;
+   gap: 30px;
+}
+
+.clear-wishlist-link {
+   color: #1f7a45;
+   font-weight: 600;
+   text-decoration: underline;
+   font-size: 14px;
+}
+
+.add-all-btn {
+   background-color: #1f7a45;
+   color: white;
+   border: none;
+   padding: 14px 28px;
+   border-radius:40px;
+   /* Slightly squarer than pill */
+   font-weight: 600;
+   font-size: 15px;
+   cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+   .wishlist-header-row {
+      display: none;
+      /* Hide header on mobile */
+   }
+
+   .wishlist-item {
+      grid-template-columns: 1fr;
+      gap: 12px;
+      padding: 20px;
+      border: 1px solid #eee;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      position: relative;
+   }
+
+   .remove-icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 28px;
+   }
+
+   /* Force grid columns to behave like block/flex */
+   .col-price,
+   .col-date,
+   .col-stock,
+   .col-action {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+   }
+
+   /* Add pseudo-labels for mobile */
+   .col-price::before {
+      content: "Price:";
+      font-weight: 600;
+      color: #555;
+   }
+
+   .col-date::before {
+      content: "Date Added:";
+      font-weight: 600;
+      color: #555;
+   }
+
+   .col-stock::before {
+      content: "Status:";
+      font-weight: 600;
+      color: #555;
+   }
+
+   .wishlist-footer {
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+   }
+
+   .share-section,
+   .bulk-actions {
+      width: 100%;
+      justify-content: space-between;
+      flex-wrap: wrap;
+   }
+}

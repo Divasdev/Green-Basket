@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Coming Soon - GreenBasket</title>
+   <link rel="stylesheet" href="assets/css/styles.css">
+   <link rel="stylesheet" href="assets/css/coming-soon.css">
+   <!-- Google Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet">
+</head>
+
+<body>
+
+   <main class="cs-container">
+      <!-- LEFT SIDE: Content -->
+      <section class="cs-content">
+         <div class="cs-logo-wrapper">
+            <a href="index.html" class="cs-logo-link">
+               <img src="assets/images/HubSpot Brand Kit/Logo/SVG/shopping-bag.png" alt="GreenBasket Logo"
+                  class="cs-logo-icon">
+               <span class="cs-logo-text">GreenBasket.</span>
+            </a>
+         </div>
+
+         <div class="cs-text-block">
+            <span class="cs-badge">Coming Soon</span>
+            <h1 class="cs-heading">Get Notified <span class="highlight">When<br>We Launch!</span></h1>
+         </div>
+
+         <div class="cs-timer">
+            <div class="timer-box">
+               <span class="time-val" id="days">45</span>
+               <span class="time-label">Days</span>
+            </div>
+            <!-- Divider -->
+            <div class="timer-divider"></div>
+
+            <div class="timer-box">
+               <span class="time-val" id="hours">14</span>
+               <span class="time-label">Hours</span>
+            </div>
+            <div class="timer-divider"></div>
+
+            <div class="timer-box">
+               <span class="time-val" id="minutes">48</span>
+               <span class="time-label">Minutes</span>
+            </div>
+            <div class="timer-divider"></div>
+
+            <div class="timer-box">
+               <span class="time-val" id="seconds">18</span>
+               <span class="time-label">Seconds</span>
+            </div>
+         </div>
+
+         <div class="cs-subscribe">
+            <p class="sub-label">Get notified when site goes live:</p>
+            <form class="sub-form" onsubmit="event.preventDefault();">
+               <input type="email" placeholder="Enter your email" class="sub-input" required>
+               <button type="submit" class="sub-btn">Subscribe</button>
+            </form>
+         </div>
+
+         <div class="cs-footer">
+            <div class="cs-socials">
+               <a href="#" class="social-circle"><img src="assets/images/HubSpot Brand Kit/Logo/JPEG/facebook.png"
+                     alt="Facebook"></a>
+               <a href="#" class="social-circle"><img src="assets/images/HubSpot Brand Kit/Logo/JPEG/twitter.png"
+                     alt="Twitter"></a>
+               <a href="#" class="social-circle"><img src="assets/images/HubSpot Brand Kit/Logo/JPEG/pinterest.png"
+                     alt="Pinterest"></a>
+               <a href="#" class="social-circle"><img src="assets/images/HubSpot Brand Kit/Logo/JPEG/instagram.png"
+                     alt="Instagram"></a>
+            </div>
+            <p class="cs-copyright">Copyright © 2024 GreenBasket. All Rights Reserved.</p>
+         </div>
+      </section>
+
+      <!-- RIGHT SIDE: Image -->
+      <section class="cs-image-side">
+         <div class="cs-bg-image" style="background-image: url('assets/images/hero_image.png');"></div>
+         <!-- Decorative stars/sparkles could be added via CSS pseudoelements or images -->
+      </section>
+   </main>
+
+   <script>
+      // Simple Countdown Script
+      const targetDate = new Date();
+      targetDate.setDate(targetDate.getDate() + 45); // 45 days from now
+
+      function updateTimer() {
+         const now = new Date().getTime();
+         const distance = targetDate - now;
+
+         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+         document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+         document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+         document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+         document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+      }
+
+      setInterval(updateTimer, 1000);
+      updateTimer();
+   </script>
+</body>
+
+</html>

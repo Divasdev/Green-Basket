@@ -1,0 +1,188 @@
+/* My Account Page Styles */
+
+/* Hero customization if needed */
+
+/* Account Layout */
+.account-section {
+   padding: 60px 20px;
+   background-color: #fff;
+   font-family: "Inter", sans-serif;
+   min-height: 600px;
+}
+
+.account-container {
+   max-width: 1200px;
+   margin: 0 auto;
+   display: flex;
+   gap: 40px;
+}
+
+/* Sidebar */
+.account-sidebar {
+   width: 280px;
+   flex-shrink: 0;
+}
+
+.sidebar-nav {
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+}
+
+.sidebar-item {
+   display: block;
+   padding: 16px 24px;
+   border: 1px solid #eee;
+   border-radius: 8px;
+   /* Slightly rounded corners for list items */
+   text-decoration: none;
+   color: #333;
+   font-size: 15px;
+   font-weight: 500;
+   transition: all 0.2s;
+   background-color: #fff;
+}
+
+.sidebar-item:hover {
+   background-color: #f9f9f9;
+}
+
+.sidebar-item.active {
+   background-color: #f6cc45;
+   /* Brand Yellow */
+   border-color: #f6cc45;
+   color: #111;
+   font-weight: 600;
+}
+
+/* Main Content */
+.account-content {
+   flex: 1;
+   padding-left: 20px;
+   /* Space between sidebar and form */
+}
+
+.profile-header {
+   margin-bottom: 40px;
+}
+
+.profile-img-wrapper {
+   position: relative;
+   width: 100px;
+   height: 100px;
+   margin-bottom: 20px;
+}
+
+.profile-img {
+   width: 100%;
+   height: 100%;
+   border-radius: 50%;
+   object-fit: cover;
+   border: 2px solid #fff;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-profile-btn {
+   position: absolute;
+   bottom: 0px;
+   right: 0px;
+   background-color: #1f7a45;
+   /* Brand Green */
+   border: 2px solid #fff;
+   width: 32px;
+   height: 32px;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.edit-profile-btn:hover {
+   background-color: #166037;
+}
+
+
+/* Form Styling */
+.account-form {
+   max-width: 800px;
+}
+
+.form-row {
+   display: flex;
+   gap: 24px;
+   margin-bottom: 20px;
+}
+
+.form-group {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+}
+
+.form-group label {
+   font-size: 14px;
+   font-weight: 600;
+   color: #333;
+}
+
+.form-group input,
+.form-group select {
+   padding: 14px 16px;
+   border: 1px solid #e0e0e0;
+   border-radius: 8px;
+   /* Rounded inputs */
+   font-size: 15px;
+   color: #555;
+   font-family: "Inter", sans-serif;
+   outline: none;
+   transition: border-color 0.2s;
+   background-color: #fff;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+   border-color: #1f7a45;
+}
+
+.update-btn {
+   background-color: #1f7a45;
+   color: white;
+   border: none;
+   padding: 14px 32px;
+   border-radius: 30px;
+   /* Fully rounded/pill shape */
+   font-size: 15px;
+   font-weight: 600;
+   cursor: pointer;
+   margin-top: 20px;
+   font-family: "Poppins", sans-serif;
+   transition: background-color 0.2s;
+}
+
+.update-btn:hover {
+   background-color: #166037;
+}
+
+
+/* Responsive */
+@media (max-width: 800px) {
+   .account-container {
+      flex-direction: column;
+   }
+
+   .account-sidebar {
+      width: 100%;
+   }
+
+   .account-content {
+      padding-left: 0;
+   }
+
+   .form-row {
+      flex-direction: column;
+      gap: 20px;
+   }
+}

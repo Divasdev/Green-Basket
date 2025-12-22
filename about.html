@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>About Us - GreenBasket</title>
+   <link rel="stylesheet" href="assets/css/styles.css">
+   <link rel="stylesheet" href="assets/css/shop.css">
+   <link rel="stylesheet" href="assets/css/about.css">
+   <script src="assets/js/scripts.js" defer></script>
+   <!--LINK TO GOOGLE FONTS-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   <!--Header Section -->
+   <header>
+      <!--- TOP HEADER-->
+      <div class="topmost-div">
+         <span class="call-us">Call-Us-:+91 7005869756</span>
+         <span class="promo-tag">Sign up and GET 25% OFF for your first order. <a href="" class="signuplink">Sign Up
+               now</a></span>
+         <div class="social-links">
+            <a href=""><img src="assets/images/HubSpot Brand Kit/Logo/JPEG/facebook.png" class="facebook-logo"
+                  alt="facebook"></a>
+            <a href=""><img src="assets/images/HubSpot Brand Kit/Logo/JPEG/instagram.png" class="instagram-logo"
+                  alt="instagram"></a>
+            <a href=""><img src="assets/images/HubSpot Brand Kit/Logo/JPEG/twitter.png" class="twitter-logo"
+                  alt="twitter"></a>
+         </div>
+      </div>
+
+      <div class="header-container">
+
+         <!-- LEFT: logo + location -->
+         <div class="header-left">
+            <img src="assets/images/HubSpot Brand Kit/Logo/SVG/shopping-bag.png" class="logosvg" alt="logo">
+            <h1 class="logo">GreenBasket</h1>
+
+            <div class="location-box">
+               <label class="location-label" for="location-select">Location</label>
+               <select id="location-select" class="location-select">
+                  <option>New York, USA</option>
+                  <option>Los Angeles, USA</option>
+                  <option>Chicago, USA</option>
+               </select>
+            </div>
+         </div>
+
+         <!-- CENTER: search bar -->
+         <div class="search-area">
+            <img src="assets/images/HubSpot Brand Kit/Logo/SVG/search.png" class="search-icon" alt="search">
+            <input type="text" class="search-input" placeholder="Search for products" aria-label="Search products">
+         </div>
+
+         <!-- RIGHT: icons -->
+         <div class="header-right">
+            <a href="wishlist.html"><img src="assets/images/HubSpot Brand Kit/Logo/SVG/e-commerce.png"
+                  class="wishlisticon" alt="wishlist"></a>
+            <a href="cart.html" class="cart-link" title="Cart">
+               <img src="assets/images/HubSpot Brand Kit/Logo/SVG/shopping-bag.png" class="carticon" alt="cart">
+               <span class="cart-badge">3</span>
+            </a>
+            <a href="myaccount.html"><img class="usericon" src="assets/images/HubSpot Brand Kit/Logo/SVG/user.png"
+                  alt="user"></a>
+         </div>
+      </div> <!-- end of header-container -->
+      <!--header bootom row-->
+      <section class="bottom-header-container">
+         <input type="checkbox" id="menu-toggle" class="menu-toggle">
+         <div class="browsediv">
+            <label for="menu-toggle" class="browse">
+               <img src="assets/images/HubSpot Brand Kit/Logo/SVG/more.png" width="20px" alt="menu">
+               Browse All Categories
+            </label>
+         </div>
+
+         <nav class="bottom-nav">
+            <ul class="nav-list">
+               <li><a href="index.html">Home</a></li>
+               <li><a href="shop.html">Shop</a></li>
+               <li><a href="coming-soon.html">Fruits</a></li>
+               <li><a href="coming-soon.html">Vegetables</a></li>
+               <li><a href="coming-soon.html">Beverages</a></li>
+               <li><a href="about.html">About Us</a></li>
+               <li><a href="coming-soon.html">Blogs</a></li>
+            </ul>
+         </nav>
+         <!-- Recently viewed dropdown -->
+         <div class="recently-viewed">
+            <button class="recent-btn">Recently Viewed <span class="caret">▾</span></button>
+            <div class="recent-dropdown">
+               <ul class="recent-list">
+                  <li class="recent-item">
+                     <img src="assets/images/Products/apple.png" alt="Apple" class="recent-thumb">
+                     <div class="recent-meta"><strong>Red Apple</strong><span class="price">₹45 / kg</span></div>
+                  </li>
+                  <li class="recent-item">
+                     <img src="assets/images/Products/tomato.png" alt="Tomato" class="recent-thumb">
+                     <div class="recent-meta"><strong>Tomato</strong><span class="price">₹30 / kg</span></div>
+                  </li>
+                  <li class="recent-item">
+                     <img src="assets/images/Products/milk.png" alt="Milk" class="recent-thumb">
+                     <div class="recent-meta"><strong>Milk (1L)</strong><span class="price">₹60</span></div>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </section>
+
+   </header>
+
+   <!-- Hero Section (Breadcrumb) -->
+   <section class="hero-section">
+      <div class="hero-wrapper">
+         <h3 class="hero-header">About Us</h3>
+         <h4 class="hero-sub-header">Home / About Us</h4>
+      </div>
+   </section>
+
+   <!-- About Content Section -->
+   <section class="about-content">
+      <div class="container about-container">
+         <!-- Image Side -->
+         <div class="about-image-wrapper">
+            <img src="assets/images/hero_image.png" alt="Grocery Shopping" class="about-main-img">
+            <div class="years-badge">
+               <span class="years-num">16</span>
+               <span class="years-text">Years<br>of Services</span>
+            </div>
+         </div>
+
+         <!-- Text Side -->
+         <div class="about-text-content">
+            <h4 class="about-label">About Us</h4>
+            <h2 class="about-heading">Your Trusted Partner in <span class="highlight">Fresh Grocery Delivery</span></h2>
+            <p class="about-desc">
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+               dolore.
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+
+            <ul class="about-features">
+               <li><span class="check-icon">✔</span> Eco-Friendly and Sustainable Practices</li>
+               <li><span class="check-icon">✔</span> Fresh and High-Quality Groceries</li>
+               <li><span class="check-icon">✔</span> Convenient and Reliable Delivery</li>
+            </ul>
+
+            <div class="founder-sig">
+               <span class="sig-name">Jenny Alexander</span>
+               <span class="sig-role">Jenny Alexander • Founder</span>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Mission / Vision Section -->
+   <section class="vision-mission-section">
+      <div class="container vm-container">
+         <div class="vm-image">
+            <img src="assets/images/users/happy-customer1.png" alt="Happy Customer">
+         </div>
+         <div class="vm-cards">
+            <div class="vm-card">
+               <div class="vm-icon box-icon">🚀</div>
+               <h3>Our Vision</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna.</p>
+            </div>
+            <div class="vm-card">
+               <div class="vm-icon eye-icon">👁</div>
+               <h3>Our Mission</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna.</p>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Team Section -->
+   <section class="team-section">
+      <div class="container">
+         <div class="team-header">
+            <h4>Our Team</h4>
+            <h2>Meet The Passionate<br>Team Behind Our Success</h2>
+         </div>
+
+         <div class="team-grid">
+            <!-- Team Member 1 -->
+            <div class="team-card">
+               <div class="team-img">
+                  <img src="assets/images/Avatars/avatar1.png" alt="Jenny Alexander">
+               </div>
+               <div class="team-info">
+                  <h3>Jenny Alexander</h3>
+                  <p>Founder & CEO</p>
+               </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="team-card">
+               <div class="team-img">
+                  <img src="assets/images/Avatars/avatar2.png" alt="Bessie Cooper">
+               </div>
+               <div class="team-info">
+                  <h3>Bessie Cooper</h3>
+                  <p>Operations Manager</p>
+               </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="team-card">
+               <div class="team-img">
+                  <img src="assets/images/Avatars/avatar3.png" alt="Jane Cooper">
+               </div>
+               <div class="team-info">
+                  <h3>Jane Cooper</h3>
+                  <p>Warehouse Manager</p>
+               </div>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="team-card">
+               <div class="team-img">
+                  <img src="assets/images/Avatars/avatar4.png" alt="Robert Fox">
+               </div>
+               <div class="team-info">
+                  <h3>Robert Fox</h3>
+                  <p>Inventory Specialist</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+   <!--Footer section -->
+   <!--Newsletter section-->
+   <section class="newsletter" aria-label="Subscribe to our newsletter">
+      <div class="container newsletter-container">
+         <article class="newsletter-contains">
+            <h3 class="header-newsletter">Our Newsletter</h3>
+            <h2 class="newsletter-header">
+               Subscribe to our Newsletter to <br> Get <span class="highlight-text-newsletter">Updates on Our Latest
+                  Offers</span>
+            </h2>
+
+            <p class="newsletter-promo">Get 25% off on your first order by subscribing to our newsletter</p>
+
+            <form id="newsletterForm" class="newsletter-form" novalidate>
+
+               <input id="newsletter-email" name="email" type="email" class="newsletter-input"
+                  placeholder="Enter Email Address" required aria-required="true" autocomplete="email">
+
+               <button type="submit" class="subs-btn" aria-label="Subscribe to newsletter">Subscribe</button>
+
+               <div id="newsletterStatus" class="newsletter-status" role="status" aria-live="polite"></div>
+            </form>
+         </article>
+      </div>
+   </section>
+   <!-- SITE FOOTER -->
+   <footer class="site-footer" role="contentinfo" aria-label="Footer">
+      <div class="container footer-container">
+         <div class="footer-top">
+            <div class="footer-brand">
+               <img src="assets/images/HubSpot Brand Kit/Logo/SVG/shopping-bag.png" alt="GreenBasket logo"
+                  class="footer-logo" width="48" height="48">
+               <div class="brand-text">
+                  <strong class="brand-name">GreenBasket.</strong>
+                  <p class="brand-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                     incididunt ut labore et dolore magna.</p>
+                  <div class="social-icons">
+                     <a href="#" aria-label="Facebook"><img src="assets/images/HubSpot Brand Kit/Logo/JPEG/facebook.png"
+                           alt="facebook" width="28" height="28"></a>
+                     <a href="#" aria-label="Twitter"><img src="assets/images/HubSpot Brand Kit/Logo/JPEG/twitter.png"
+                           alt="twitter" width="28" height="28"></a>
+                     <a href="#" aria-label="Instagram"><img
+                           src="assets/images/HubSpot Brand Kit/Logo/JPEG/instagram.png" alt="instagram" width="28"
+                           height="28"></a>
+                     <a href="#" aria-label="Pinterest"><img
+                           src="assets/images/HubSpot Brand Kit/Logo/JPEG/pinterest.png" alt="pinterest" width="28"
+                           height="28"></a>
+                  </div>
+               </div>
+            </div>
+
+            <div class="footer-links">
+               <div class="footer-col">
+                  <h4>Company</h4>
+                  <ul>
+                     <li><a href="about.html">About Us</a></li>
+                     <li><a href="#">Blog</a></li>
+                     <li><a href="#">Contact Us</a></li>
+                     <li><a href="#">Careers</a></li>
+                  </ul>
+               </div>
+
+               <div class="footer-col">
+                  <h4>Customer Services</h4>
+                  <ul>
+                     <li><a href="myaccount.html">My Account</a></li>
+                     <li><a href="trackorder.html">Track Your Order</a></li>
+                     <li><a href="#">Returns</a></li>
+                     <li><a href="#">FAQ</a></li>
+                  </ul>
+               </div>
+
+               <div class="footer-col">
+                  <h4>Our Information</h4>
+                  <ul>
+                     <li><a href="#">Privacy</a></li>
+                     <li><a href="#">Terms & Conditions</a></li>
+                     <li><a href="#">Return Policy</a></li>
+                  </ul>
+               </div>
+
+               <div class="footer-col contact-col">
+                  <h4>Contact Info</h4>
+                  <address>
+                     <p>+0123-456-789</p>
+                     <p>example@gmail.com</p>
+                     <p>8502 Preston Rd.<br>Inglewood, Maine 98380</p>
+                  </address>
+               </div>
+            </div>
+         </div>
+
+         <div class="footer-bottom">
+            <p>Copyright © 2024 <strong>GreenBasket</strong> Website Design. All Rights Reserved.</p>
+            <div class="footer-controls">
+               <select aria-label="Language selector" class="footer-select">
+                  <option>English</option>
+                  <option>Español</option>
+               </select>
+               <select aria-label="Currency selector" class="footer-select">
+                  <option>USD</option>
+
+               </select>
+            </div>
+         </div>
+      </div>
+   </footer>
+
+
+</body>
+
+</html>

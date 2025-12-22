@@ -1,0 +1,178 @@
+/* Payment Wrapper */
+.payment-wrapper {
+  background: #fff;
+  border-radius: 12px;
+  /* padding: 24px; */
+  /* Remove padding if needed to match checkout */
+  flex: 1;
+}
+
+.payment-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Payment Option Card */
+.payment-option {
+  display: flex;
+  align-items: center;
+  /* Center content vertically */
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 16px 20px;
+  cursor: pointer;
+  background-color: #fff;
+  transition: all 0.2s ease;
+  gap: 16px;
+  /* Space between radio and content */
+}
+
+/* Selected state - logic can be handled by :checked + span if we want custom radio */
+/* For now, relying on native radio or simple parent styling */
+.payment-option:hover {
+  border-color: #1f7a45;
+}
+
+.payment-option input[type="radio"] {
+  accent-color: #1f7a45;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Option Content (Icon + Text) */
+.option-content {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.payment-logo {
+  height: 24px;
+  width: auto;
+  object-fit: contain;
+}
+
+.payment-text {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* New Card Section (Expanded) */
+.new-card-section {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  /* Ensure content stays inside */
+}
+
+/* The label part of the new card section looks like a payment option header */
+.payment-option.expanded {
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  border-radius: 0;
+  /* Remove rounded corners for top header part */
+  background: #fff;
+}
+
+/* Card Form */
+.card-form {
+  padding: 24px;
+  background: #fff;
+}
+
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input {
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
+  font-family: inherit;
+}
+
+.form-group input:focus {
+  border-color: #1f7a45;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+/* Save Card Checkbox */
+.save-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 24px;
+  font-size: 14px;
+  color: #555;
+}
+
+.save-card input[type="checkbox"] {
+  accent-color: #1f7a45;
+  width: 16px;
+  height: 16px;
+}
+
+/* Add Card Button */
+.add-card-btn {
+  background-color: #1f7a45;
+  color: #fff;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  /* width: 100%; Optional: make it full width */
+  width: auto;
+  display: inline-block;
+}
+
+.add-card-btn:hover {
+  background-color: #166037;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .payment-logo {
+    height: 20px;
+  }
+}

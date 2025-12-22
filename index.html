@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> GreenBasket</title>
+   <link rel="stylesheet" href="assets/css/styles.css">
+   <script src="assets/js/scripts.js" defer></script>
+   <!--LINK TO GOOGLE FONTS-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+   <!--Fevicon-->
+   <link rel="icon" href="Favicon-32x32.svg" sizes="32x32" type="image/svg+xml">
+</head>
+
+<body>
+   <header>
+      <!--- TOP HEADER-->
+      <div class="topmost-div">
+         <span class="call-us">Call-Us-:+91 7005869756</span>
+         <span class="promo-tag">Sign up and GET 25% OFF for your first order. <a href="" class="signuplink">Sign Up
+               now</a></span>
+         <div class="social-links">
+            <a href=""><img src="assets/images/HubSpot Brand Kit/Logo/JPEG/facebook.png" class="facebook-logo"
+                  alt="facebook"></a>
+            <a href=""><img src="assets/images/HubSpot Brand Kit/Logo/JPEG/instagram.png" class="instagram-logo"
+                  alt="instagram"></a>
+            <a href=""><img src="assets/images/HubSpot Brand Kit/Logo/JPEG/twitter.png" class="twitter-logo"
+                  alt="twitter"></a>
+         </div>
+      </div>
+
+      <div class="header-container">
+
+         <!-- LEFT: logo + location -->
+         <div class="header-left">
+            <img src="assets/images/HubSpot Brand Kit/Logo/SVG/shopping-bag.png" class="logosvg" alt="logo">
+            <h1 class="logo">GreenBasket</h1>
+
+            <div class="location-box">
+               <label class="location-label" for="location-select">Location</label>
+               <select id="location-select" class="location-select">
+                  <option>New York, USA</option>
+                  <option>Los Angeles, USA</option>
+                  <option>Chicago, USA</option>
+               </select>
+            </div>
+         </div>
+
+         <!-- CENTER: search bar -->
+         <div class="search-area">
+            <img src="assets/images/HubSpot Brand Kit/Logo/SVG/search.png" class="search-icon" alt="search">
+            <input type="text" class="search-input" placeholder="Search for products" aria-label="Search products">
+         </div>
+
+         <!-- RIGHT: icons -->
+         <div class="header-right">
+            <a href="wishlist.html"><img src="assets/images/HubSpot Brand Kit/Logo/SVG/e-commerce.png"
+                  class="wishlisticon" alt="wishlist"></a>
+            <a href="cart.html" class="cart-link" title="Cart">
+               <img src="assets/images/HubSpot Brand Kit/Logo/SVG/shopping-bag.png" class="carticon" alt="cart">
+               <span class="cart-badge">3</span>
+            </a>
+            <a href="myaccount.html"><img class="usericon" src="assets/images/HubSpot Brand Kit/Logo/SVG/user.png"
+                  alt="user"></a>
+         </div>
+      </div> <!-- end of header-container -->
+      <!--header bootom row-->
+      <section class="bottom-header-container">
+         <input type="checkbox" id="menu-toggle" class="menu-toggle">
+         <div class="browsediv">
+            <label for="menu-toggle" class="browse">
+               <img src="assets/images/HubSpot Brand Kit/Logo/SVG/more.png" width="20px" alt="menu">
+               Browse All Categories
+            </label>
+         </div>
+
+         <nav class="bottom-nav">
+            <ul class="nav-list">
+               <li><a href="#">Home</a></li>
+               <li><a href="shop.html">Shop</a></li>
+               <li><a href="coming-soon.html">Fruits</a></li>
+               <li><a href="coming-soon.html">Vegetables</a></li>
+               <li><a href="coming-soon.html">Beverages</a></li>
+               <li><a href="about.html">About Us</a></li>
+               <li><a href="coming-soon.html">Blogs</a></li>
+            </ul>
+         </nav>
+         <!-- Recently viewed dropdown -->
+         <div class="recently-viewed">
+            <button class="recent-btn">Recently Viewed <span class="caret">▾</span></button>
+            <div class="recent-dropdown">
+               <ul class="recent-list">
+                  <li class="recent-item">
+                     <img src="assets/images/Products/apple.png" alt="Apple" class="recent-thumb">
+                     <div class="recent-meta"><strong>Red Apple</strong><span class="price">₹45 / kg</span></div>
+                  </li>
+                  <li class="recent-item">
+                     <img src="assets/images/Products/tomato.png" alt="Tomato" class="recent-thumb">
+                     <div class="recent-meta"><strong>Tomato</strong><span class="price">₹30 / kg</span></div>
+                  </li>
+                  <li class="recent-item">
+                     <img src="assets/images/Products/milk.png" alt="Milk" class="recent-thumb">
+                     <div class="recent-meta"><strong>Milk (1L)</strong><span class="price">₹60</span></div>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </section>
+
+   </header>
+
+   <!--HERO SECTION-->
+   <section class="hero-section">
+      <div class="hero-content">
+         <!-- Renamed wrapper to avoid conflict with badge styling -->
+         <div class="hero-text-wrapper">
+            <div class="hero-text-badge">
+               <img src="assets/images/HubSpot Brand Kit/Logo/SVG/shopping-cart.png" class="badge-icon" alt="icon">
+               <span>The Best Online Grocery Store</span>
+            </div>
+
+            <h1 class="Hero-header">
+               Your One-Stop Shop for <span class="highlight-text">Quality Groceries</span>
+            </h1>
+
+            <p class="hero-tagline">“Freshness Handpicked, Delivered Faster Than You Think”</p>
+
+            <div class="hero-buttons">
+               <button class="hero-shopnow-btn">Shop Now &rarr;</button>
+               <a href="#" class="view-all-products">View All Products</a>
+            </div>
+         </div>
+      </div>
+
+      <div class="hero-image-container">
+         <img src="assets/images/hero_image.png" alt="Happy woman holding grocery basket" class="hero-img">
+
+         <div class="hero-iamge-floating-text">
+            <div class="image-tag">
+               <img src="assets/images/HubSpot Brand Kit/Logo/SVG/e-commerce.png" width="20" alt="">
+               <span>Secure Payment</span>
+            </div>
+            <!-- Added a second tag if needed or remove if not in design -->
+         </div>
+      </div>
+   </section>
+
+
+   <!---ITEM CATEGORIES HTML-->
+   <section class="item-categories">
+      <div class="categories-container">
+         <h3 class="item-card-header">Categories</h3>
+         <h2 class="item-card-header2">Featured <span class="item-highlighted-text">Categories</span></h2>
+
+         <!-- use div for grid since children will be divs -->
+         <div class="categories-grid">
+            <div class="category-card">
+               <div class="thumb-wrap">
+                  <img src="assets/images/categories/vegetables.png" alt="Vegetables" class="category-thumb">
+               </div>
+               <div class="category-body">
+                  <h4 class="category-title">Vegetables</h4>
+                  <p class="category-count">52 products</p>
+               </div>
+            </div>
+
+            <div class="category-card">
+               <div class="thumb-wrap">
+                  <img src="assets/images/categories/fruits.png" alt="Fresh Fruits" class="category-thumb">
+               </div>
+               <div class="category-body">
+                  <h4 class="category-title">Fresh Fruits</h4>
+                  <p class="category-count">48 products</p>
+               </div>
+            </div>
+
+            <div class="category-card">
+               <div class="thumb-wrap">
+                  <img src="assets/images/Products/milk.png" alt="Milk & Eggs" class="category-thumb">
+               </div>
+               <div class="category-body">
+                  <h4 class="category-title">Milk &amp; Eggs</h4>
+                  <p class="category-count">12 products</p>
+               </div>
+            </div>
+
+            <div class="category-card">
+               <div class="thumb-wrap">
+                  <img src="assets/images/categories/bakery.png" alt="Bakery" class="category-thumb">
+               </div>
+               <div class="category-body">
+                  <h4 class="category-title">Bakery</h4>
+                  <p class="category-count">62 products</p>
+               </div>
+            </div>
+
+            <div class="category-card">
+               <div class="thumb-wrap">
+                  <img src="assets/images/categories/household-categories.png" alt="House Hold" class="category-thumb">
+               </div>
+               <div class="category-body">
+                  <h4 class="category-title">House Hold</h4>
+                  <p class="category-count">25 products</p>
+               </div>
+            </div>
+
+            <div class="category-card">
+               <div class="thumb-wrap">
+                  <img src="assets/images/categories/dryfruits.png" alt="Dry Fruits" class="category-thumb">
+               </div>
+               <div class="category-body">
+                  <h4 class="category-title">Dry Fruits</h4>
+                  <p class="category-count">8 products</p>
+               </div>
+            </div>
+         </div> <!-- .categories-grid -->
+      </div>
+   </section>
+
+
+
+
+
+   <section class="promo-row">
+      <!---LEFT PROMO CARD-->
+      <div class="left-card promo-card">
+         <div class="left-card-container">
+
+            <div class="vegetables-promo">
+               <span class="flat-discount-vegetables">
+                  Flat 20% Discount
+               </span>
+
+
+               <h2 class="promo-heading">
+                  Purely Fresh <br>Vegetables
+               </h2>
+               <p class="promo-tagline-promo">
+                  We deliver Fresh Vegetables directly from the farmers to Your doorstep.
+               </p>
+
+               <button class="promo-shop-btn" type="button">
+                  Shop Now &#8594;
+               </button>
+            </div>
+
+            <div class="promo-image">
+               <img src="assets/images/promo/vegetable-promo-image.png" alt="Basket of fresh vegetables">
+            </div>
+
+         </div>
+      </div>
+      <!--RIGHT PROMO CARD-->
+      <div class="promo-card right-card promo-card--yellow">
+         <div class="right-card-container">
+
+            <div class="fruits-promo">
+               <span class="flat-discount-fruits">
+                  Flat 25% Discount
+               </span>
+
+
+               <h2 class="promo-heading">
+                  Fresh Fruits,<br>
+                  Pure Quality
+               </h2>
+               <p class="promo-tagline-promo">
+                  We deliver Fresh Fruits directly from the farmers to Your doorstep.
+               </p>
+
+               <button class="promo-shop-btn" type="button">
+                  Shop Now &#8594;
+               </button>
+            </div>
+
+            <div class="promo-image">
+               <img src="assets/images/promo/fruits-promo-card.png" alt="Basket of fresh fruits">
+            </div>
+
+         </div>
+      </div>
+   </section>
+
+
+   <!---PRODUCTS-->
+   <section class="products-section">
+      <div class="products-wrap">
+         <div class="product-text">
+            <h4 class="products">
+               Products
+            </h4>
+            <h2 class="featured-products">Featured <span class="highlight-products">Products</span></h2>
+         </div>
+
+         <button class="view-btn">
+            View All Products &#8594;
+         </button>
+
+      </div>
+
+
+      <div class="products-grid">
+         <article class="product-card" aria-label="Fresh strawberry-500g">
+            <figure class="product-media">
+               <img src="assets/images/Products/strawberry-isolated-white-background-close-up.jpg"
+                  alt="Fresh strawberries in a bowl-500g" class="product-image" width="400" height="300">
+
+            </figure>
+            <div class="product-toprow">
+               <span class="product-badge">
+                  20% off</span>
+               <button class="wishlist-btn" type="button" aria-pressed="false" aria-label="Add to wishlist">
+
+
+                  <img src="assets/images/HubSpot Brand Kit/Logo/SVG/e-commerce.png" class="wishlisticon-productscard"
+                     alt="wishlisticon" width="30">
+               </button>
+
+            </div>
+            <div class="product-body">
+               <div class="fruits-rating">
+                  <p class="product-type">Fruits</p>
+                  <span class="product-rating"> ⭐️ 4.8</span>
+               </div>
+
+               <h3 class="product-name">Fresh strawberry</h3>
+               <p class="product-quantity">500g</p>
+               <div class="product-price-wrap">
+                  <strong class="product-price">
+                     $8.00 </strong>
+
+                  <span class="product-oldprice">$10.00</span>
+
+                  <button class="product-addtocart" type="button" aria-label="Add Fresh strawberry to cart">
+                     <img src="assets/images/HubSpot Brand Kit/Logo/SVG/shopping-bag.png" class="carticon"
+                        alt="cart icon">
+
+
+                     <span class="product-add">Add</span>
+                  </button>
+               </div>
+
+            </div>
+
+         </article>
+
+         <article class="product-card" aria-label="Fresh strawberry-500g">
+            <figure class="product-media">
+               <img src="assets/images/Products/strawberry-isolated-white-background-close-up.jpg"
+                  alt="Fresh strawberries in a bowl-500g" class="product-image" width="400" height="300">
+
+            </figure>
+            <div class="product-toprow">
+               <span class="product-badge">
+                  20% off</span>
+               <button class="wishlist-btn" type="button" aria-pressed="false" aria-label="Add to wishlist">
+
+
+                  <img src="assets/images/HubSpot Brand Kit/Logo/SVG/e-commerce.png" class="wishlisticon-productscard"
+                     alt="wishlisticon" width="30">
+               </button>
+
+            </div>
+            <div class="product-body">
+               <div class="fruits-rating">
+                  <p class="product-type">Fruits</p>
+                  <span class="product-rating"> ⭐️ 4.8</span>
+               </div>
+
+               <h3 class="product-name">Fresh strawberry</h3>
+               <p class="product-quantity">500g</p>
+               <div class="product-price-wrap">
+                  <strong class="product-price">
+                     $8.00 </strong>
+
+                  <span class="product-oldprice">$10.00</span>
+
+                  <button class="product-addtocart" type="button" aria-label="Add Fresh strawberry to cart">
+                     <img src="assets/images/HubSpot Brand Kit/Logo/SVG/shopping-bag.png" class="carticon"
+                        alt="cart icon">
+
+
+                     <span class="product-add">Add</span>
+                  </button>
+               </div>
+
+            </div>
+
+         </article>
+
+         <article class="product-card" aria-label="Fresh strawberry-500g">
+            <figure class="product-media">
+               <img src="assets/images/Products/strawberry-isolated-white-background-close-up.jpg"
+                  alt="Fresh strawberries in a bowl-500g" class="product-image" width="400" height="300">
+
+            </figure>
+            <div class="product-toprow">
+               <span class="product-badge">
+                  20% off</span>
+               <button class="wishlist-btn" type="button" aria-pressed="false" aria-label="Add to wishlist">
+
+
+                  <img src="assets/images/HubSpot Brand Kit/Logo/SVG/e-commerce.png" class="wishlisticon-productscard"
+                     alt="wishlisticon" width="30">
+               </button>
+
+            </div>
+            <div class="product-body">
+               <div class="fruits-rating">
+                  <p class="product-type">Fruits</p>
+                  <span class="product-rating"> ⭐️ 4.8</span>
+               </div>
+
+               <h3 class="product-name">Fresh strawberry</h3>
+               <p class="product-quantity">500g</p>
+               <div class="product-price-wrap">
+                  <strong class="product-price">
+                     $8.00 </strong>
+
+                  <span class="product-oldprice">$10.00</span>
+
+                  <button class="product-addtocart" type="button" aria-label="Add Fresh strawberry to cart">
+                     <img src="assets/images/HubSpot Brand Kit/Logo/SVG/shopping-bag.png" class="carticon"
+                        alt="cart icon">
+
+
+                     <span class="product-add">Add</span>
+                  </button>
+               </div>
+
+            </div>
+
+         </article>
+         <article class="product-card" aria-label="Fresh strawberry-500g">
+            <figure class="product-media">
+               <img src="assets/images/Products/strawberry-isolated-white-background-close-up.jpg"
+                  alt="Fresh strawberries in a bowl-500g" class="product-image" width="400" height="300">
+
+            </figure>
+            <div class="product-toprow">
+               <span class="product-badge">
+                  20% off</span>
+               <button class="wishlist-btn" type="button" aria-pressed="false" aria-label="Add to wishlist">
+
+
+                  <img src="assets/images/HubSpot Brand Kit/Logo/SVG/e-commerce.png" class="wishlisticon-productscard"
+                     alt="wishlisticon" width="30">
+               </button>
+
+            </div>
+            <div class="product-body">
+               <div class="fruits-rating">
+                  <p class="product-type">Fruits</p>
+                  <span class="product-rating"> ⭐️ 4.8</span>
+               </div>
+
+               <h3 class="product-name">Fresh strawberry</h3>
+               <p class="product-quantity">500g</p>
+               <div class="product-price-wrap">
+                  <strong class="product-price">
+                     $8.00 </strong>
+
+                  <span class="product-oldprice">$10.00</span>
+
+                  <button class="product-addtocart" type="button" aria-label="Add Fresh strawberry to cart">
+                     <img src="assets/images/HubSpot Brand Kit/Logo/SVG/shopping-bag.png" class="carticon"
+                        alt="cart icon">
+
+
+                     <span class="product-add">Add</span>
+                  </button>
+               </div>
+
+            </div>
+
+         </article>
+
+      </div>
+   </section>
+
+
+
+   <!-- Summer Discount -->
+   <section class="discount-section" aria-label="Summer discount promo">
+      <figure class="promo-side promo-left">
+         <img src="assets/images/promo/vegetable-promo.png" alt="Woman buying vegetables" width="300" loading="lazy"
+            class="left-image">
+
+      </figure>
+
+      <div class="discount-card" role="region" aria-labelledby="discount-heading">
+         <div class="header-wraper">
+            <header class="discount-card-header">
+               <h2 id="discount-heading">Winter <span class="highlighted-discount-text">Discount</span></h2>
+
+
+               <h4 class="discount-card-offerline">Get 50% off - Limited Time Offer!</h4>
+
+            </header>
+         </div>
+         <div class="days-counter" aria-live="polite" aria-atomic="true">
+            <div class="time-wrapper">
+               <div class="timer" id="promo-timer" data-ends-at="2026-01-01T00:00:00Z">
+                  <time class="timer-days" datetime="">04</time>
+                  <span class="timer-sep">:</span>
+                  <time class="timer-hours" datetime="">14</time>
+                  <span class="timer-sep">:</span>
+                  <time class="timer-minutes" datetime="">48</time>
+                  <span class="timer-sep">:</span>
+                  <time class="timer-seconds" datetime="">18</time>
+               </div>
+            </div>
+            <div class="time-labels">
+               Days &nbsp; Hours &nbsp; Minutes &nbsp; Seconds</div>
+         </div>
+         <a class="hero-shopnow-btn" aria-label="Shop Fresh Vegetables and Fruits">Shop Now &#8594; </a>
+      </div>
+
+      <figure class="promo-side promo-right">
+
+         <img src="assets/images/promo/fruits-promo.png" alt="Woman buying fruits" width="300" loading="lazy"
+            class="right-image">
+
+      </figure>
+   </section>
+
+
+
+   <!-- Weekly deals container -->
+   <section class="deals-promo-container" aria-label="Weekly deals promo">
+      <div class="promo-wrapper">
+
+         <!-- LEFT SIDE — TEXT -->
+         <article class="deal-promo">
+            <span class="promo-header"> Weekly Deals</span>
+
+            <h2 class="promo-tagline">
+               Unbeatable Offers: Your <br>
+               <span class="highlighted-promo-text">Weekly Grocery Specials</span>
+            </h2>
+
+            <p class="promo-para">Weekly Wonders — Fresh Deals, Fresh Savings</p>
+
+            <button class="promo-btn" type="button" aria-label="Shop weekly grocery specials">
+               Shop Now →
+            </button>
+         </article>
+
+         <!-- RIGHT SIDE — IMAGE -->
+         <figure class="promo-image" aria-hidden="true">
+            <img src="assets/images/promo/shopping basket.png" alt="Basket filled with groceries" loading="lazy"
+               class="promo-imagee">
+         </figure>
+
+      </div>
+   </section>
+
+
+
+   <!---BEST SELLER PRODUCTS-->
+   <section class="products-section">
+      <div class="products-wrap">
+         <div class="product-text">
+            <h4 class="products">
+               Best Seller
+            </h4>
+            <h2 class="featured-products">Best Seller<span class="highlight-products">Products</span></h2>
+         </div>
+
+         <button class="view-btn">
+            View All Products &#8594;
+         </button>
+
+      </div>
+
+
+      <div class="products-grid">
+         <article class="product-card" aria-label="Fresh strawberry-500g">
+            <figure class="product-media">
+               <img src="assets/images/Products/strawberry-isolated-white-background-close-up.jpg"
+                  alt="Fresh strawberries in a bowl-500g" class="product-image" width="400" height="300">
+
+            </figure>
+            <div class="product-toprow">
+               <span class="product-badge">
+                  20% off</span>
+               <button class="wishlist-btn" type="button" aria-pressed="false" aria-label="Add to wishlist">
+
+
+                  <img src="assets/images/HubSpot Brand Kit/Logo/SVG/e-commerce.png" class="wishlisticon-productscard"
+                     alt="wishlisticon" width="30">
+               </button>
+
+            </div>
+            <div class="product-body">
+               <div class="fruits-rating">
+                  <p class="product-type">Fruits</p>
+                  <span class="product-rating"> ⭐️ 4.8</span>
+               </div>
+
+               <h3 class="product-name">Fresh strawberry</h3>
+               <p class="product-quantity">500g</p>
+               <div class="product-price-wrap">
+                  <strong class="product-price">
+                     $8.00 </strong>
+
+                  <span class="product-oldprice">$10.00</span>
+
+                  <button class="product-addtocart" type="button" aria-label="Add Fresh strawberry to cart">
+                     <img src="assets/images/HubSpot Brand Kit/Logo/SVG/shopping-bag.png" class="carticon"
+                        alt="cart icon">
+
+
+                     <span class="product-add">Add</span>
+                  </button>
+               </div>
+
+            </div>
+
+         </article>
+
+         <article class="product-card" aria-label="Fresh strawberry-500g">
+            <figure class="product-media">
+               <img src="assets/images/Products/strawberry-isolated-white-background-close-up.jpg"
+                  alt="Fresh strawberries in a bowl-500g" class="product-image" width="400" height="300">
+
+            </figure>
+            <div class="product-toprow">
+               <span class="product-badge">
+                  20% off</span>
+               <button class="wishlist-btn" type="button" aria-pressed="false" aria-label="Add to wishlist">
+
+
+                  <img src="assets/images/HubSpot Brand Kit/Logo/SVG/e-commerce.png" class="wishlisticon-productscard"
+                     alt="wishlisticon" width="30">
+               </button>
+
+            </div>
+            <div class="product-body">
+               <div class="fruits-rating">
+                  <p class="product-type">Fruits</p>
+                  <span class="product-rating"> ⭐️ 4.8</span>
+               </div>
+
+               <h3 class="product-name">Fresh strawberry</h3>
+               <p class="product-quantity">500g</p>
+               <div class="product-price-wrap">
+                  <strong class="product-price">
+                     $8.00 </strong>
+
+                  <span class="product-oldprice">$10.00</span>
+
+                  <button class="product-addtocart" type="button" aria-label="Add Fresh strawberry to cart">
+                     <img src="assets/images/HubSpot Brand Kit/Logo/SVG/shopping-bag.png" class="carticon"
+                        alt="cart icon">
+
+
+                     <span class="product-add">Add</span>
+                  </button>
+               </div>
+
+            </div>
+
+         </article>
+
+         <article class="product-card" aria-label="Fresh strawberry-500g">
+            <figure class="product-media">
+               <img src="assets/images/Products/strawberry-isolated-white-background-close-up.jpg"
+                  alt="Fresh strawberries in a bowl-500g" class="product-image" width="400" height="300">
+
+            </figure>
+            <div class="product-toprow">
+               <span class="product-badge">
+                  20% off</span>
+               <button class="wishlist-btn" type="button" aria-pressed="false" aria-label="Add to wishlist">
+
+
+                  <img src="assets/images/HubSpot Brand Kit/Logo/SVG/e-commerce.png" class="wishlisticon-productscard"
+                     alt="wishlisticon" width="30">
+               </button>
+
+            </div>
+            <div class="product-body">
+               <div class="fruits-rating">
+                  <p class="product-type">Fruits</p>
+                  <span class="product-rating"> ⭐️ 4.8</span>
+               </div>
+
+               <h3 class="product-name">Fresh strawberry</h3>
+               <p class="product-quantity">500g</p>
+               <div class="product-price-wrap">
+                  <strong class="product-price">
+                     $8.00 </strong>
+
+                  <span class="product-oldprice">$10.00</span>
+
+                  <button class="product-addtocart" type="button" aria-label="Add Fresh strawberry to cart">
+                     <img src="assets/images/HubSpot Brand Kit/Logo/SVG/shopping-bag.png" class="carticon"
+                        alt="cart icon">
+
+
+                     <span class="product-add">Add</span>
+                  </button>
+               </div>
+
+            </div>
+
+         </article>
+         <article class="product-card" aria-label="Fresh strawberry-500g">
+            <figure class="product-media">
+               <img src="assets/images/Products/strawberry-isolated-white-background-close-up.jpg"
+                  alt="Fresh strawberries in a bowl-500g" class="product-image" width="400" height="300">
+
+            </figure>
+            <div class="product-toprow">
+               <span class="product-badge">
+                  20% off</span>
+               <button class="wishlist-btn" type="button" aria-pressed="false" aria-label="Add to wishlist">
+
+
+                  <img src="assets/images/HubSpot Brand Kit/Logo/SVG/e-commerce.png" class="wishlisticon-productscard"
+                     alt="wishlisticon" width="30">
+               </button>
+
+            </div>
+            <div class="product-body">
+               <div class="fruits-rating">
+                  <p class="product-type">Fruits</p>
+                  <span class="product-rating"> ⭐️ 4.8</span>
+               </div>
+
+               <h3 class="product-name">Fresh strawberry</h3>
+               <p class="product-quantity">500g</p>
+               <div class="product-price-wrap">
+                  <strong class="product-price">
+                     $8.00 </strong>
+
+                  <span class="product-oldprice">$10.00</span>
+
+                  <button class="product-addtocart" type="button" aria-label="Add Fresh strawberry to cart">
+                     <img src="assets/images/HubSpot Brand Kit/Logo/SVG/shopping-bag.png" class="carticon"
+                        alt="cart icon">
+
+
+                     <span class="product-add">Add</span>
+                  </button>
+               </div>
+
+            </div>
+
+         </article>
+
+      </div>
+   </section>
+
+
+
+
+   <!-- TESTIMONIALS SECTION -->
+   <section class="testimonials-section" aria-label="Customer testimonials">
+      <div class="container testimonials-container">
+         <header class="testimonials-header">
+            <p class="eyebrow">Testimonials</p>
+            <h2 class="testimonials-title">Testimonials from <br><span class="highlight">Our Loyal Customers</span></h2>
+         </header>
+
+         <div class="testimonials-inner">
+            <!-- avatars row -->
+            <div class="testimonials-avatars" role="tablist" aria-label="Customer avatars">
+               <img src="assets/images/Avatars/avatar1.png" alt="Customer avatar 1" class="avatar-img">
+               <img src="assets/images/Avatars/avatar2.png" alt="Customer avatar 2" class="avatar-img">
+               <img src="assets/images/Avatars/avatar3.png" alt="Customer avatar center"
+                  class="avatar-img avatar-center">
+               <img src="assets/images/Avatars/avatar4.png" alt="Customer avatar 4" class="avatar-img">
+               <img src="assets/images/Avatars/avatar5.png" alt="Customer avatar 5" class="avatar-img">
+            </div>
+
+            <!-- testimonial content + controls -->
+            <div class="testimonial-panel">
+               <div class="arrow-wrap">
+                  <button class="testimonial-prev" aria-label="Previous testimonial">◀</button>
+               </div>
+               <div class="text-wrap">
+                  <article class="testimonial" aria-live="polite">
+                     <p class="testimonial-text">"I've tried several grocery delivery services, <br>and this one is by
+                        far the
+                        best.<br> The website is user-friendly, <br> the selection is vast, and the customer service
+                        <br> is outstanding.
+                        Highly recommend!"
+                     </p>
+
+                     <div class="testimonial-rating" aria-hidden="true">⭐️ ⭐️ ⭐️ ⭐️ ⭐️ <strong>5.0</strong></div>
+
+
+                     <footer class="testimonial-author">
+                        <strong class="author-name">Bessie Cooper <br></strong>
+                        <span class="author-role">Housewife</span>
+                     </footer>
+                  </article>
+               </div>
+               <div class="arrow-wrap-right">
+                  <button class="testimonial-next" aria-label="Next testimonial">▶</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+
+   <!-- NEWS & BLOG -->
+   <section class="news-blog-section" aria-label="News and blogs">
+      <div class="products-wrap">
+         <div class="product-text">
+            <h4 class="products">
+               News & Blogs
+            </h4>
+            <h2 class="featured-products">Our Latest <span class="highlight-products">News and Blogs </span></h2>
+         </div>
+
+         <button class="view-btn">
+            View All &#8594;
+         </button>
+
+      </div>
+
+
+      <div class="blog-grid">
+         <!-- Post 1 -->
+         <article class="blog-card">
+
+            <figure class="blog-media">
+               <img src="assets/images/blog/blog2.png" alt="Woman shopping for vegetables" width="420" height="240"
+                  loading="lazy">
+
+            </figure>
+            </a>
+
+            <div class="blog-meta">
+               <p class="blog-author">Jenny Alexander ·
+                  <time datetime="2024-08-14">14 August 2024</time>
+               </p>
+
+               <h3 class="blog-title">
+                  <a>How to Create a Grocery Shopping List: Stay
+                     Organized</a>
+               </h3>
+
+               <a class="read-more" href="/blog/how-to-create-a-grocery-shopping-list">Read More</a>
+            </div>
+         </article>
+
+         <!-- Post 2 -->
+         <article class="blog-card">
+
+            <figure class="blog-media">
+               <img src="assets/images/blog/blog1.png" alt="Grocery store aisle with fresh produce" width="420"
+                  height="240" loading="lazy">
+
+            </figure>
+            </a>
+
+            <div class="blog-meta">
+               <p class="blog-author">Jenny Alexander ·
+                  <time datetime="2024-08-13">13 August 2024</time>
+               </p>
+
+               <h3 class="blog-title">
+                  <a>Summer Produce Guide: Fresh Fruits and Vegetables to Enjoy</a>
+               </h3>
+
+               <a class="read-more" href="/blog/summer-produce-guide">Read More</a>
+            </div>
+         </article>
+
+         <!-- Post 3 -->
+         <article class="blog-card">
+
+            <figure class="blog-media">
+               <img src="assets/images/blog/blog3.png" alt="Woman picking fresh produce at a market" width="420"
+                  height="240" loading="lazy">
+
+            </figure>
+            </a>
+
+            <div class="blog-meta">
+               <p class="blog-author">Jenny Alexander ·
+                  <time datetime="2024-08-12">12 August 2024</time>
+               </p>
+
+               <h3 class="blog-title">
+                  <a>Top 10 Superfoods for a Balanced Diet: Boost Your Health</a>
+               </h3>
+
+               <a class="read-more" href="/blog/top-10-superfoods">Read More</a>
+            </div>
+         </article>
+      </div> <!-- .blog-grid -->
+      </div>
+   </section>
+
+
+
+
+   <!-- FAQ / Accordion -->
+   <section class="faq-section" aria-label="Frequently asked questions">
+      <div class="container faq-container">
+         <header class="faq-header">
+            <p class="eyebrow">News & Blogs</p>
+            <h2 class="faq-title">Our Latest <span class="highlight">News & Blogs</span></h2>
+         </header>
+
+         <div class="accordion" id="faqAccordion" role="region" aria-labelledby="faq-heading">
+            <!-- item -->
+            <div class="accordion-item">
+               <h3 class="accordion-question">
+                  <button type="button" class="accordion-toggle" aria-expanded="false" aria-controls="panel-1"
+                     id="accordion-1">
+                     <span class="q-text">Are the products fresh and of high quality?</span>
+                     <span class="q-icon" aria-hidden="true">+</span>
+                  </button>
+               </h3>
+               <div id="panel-1" class="accordion-panel" role="region" aria-labelledby="accordion-1" hidden>
+                  <p>Yes — we source fresh produce directly from trusted suppliers and conduct quality checks before
+                     dispatch.</p>
+               </div>
+            </div>
+
+            <!-- item (open by default) -->
+            <div class="accordion-item">
+               <h3 class="accordion-question">
+                  <button type="button" class="accordion-toggle" aria-expanded="true" aria-controls="panel-2"
+                     id="accordion-2">
+                     <span class="q-text">What are your delivery hours?</span>
+                     <span class="q-icon" aria-hidden="true">−</span>
+                  </button>
+               </h3>
+               <div id="panel-2" class="accordion-panel" role="region" aria-labelledby="accordion-2">
+                  <p>We deliver from 7:00 AM to 10:00 PM daily. For bulk or scheduled deliveries, please contact
+                     customer support for exact time slots.</p>
+               </div>
+            </div>
+
+            <div class="accordion-item">
+               <h3 class="accordion-question">
+                  <button type="button" class="accordion-toggle" aria-expanded="false" aria-controls="panel-3"
+                     id="accordion-3">
+                     <span class="q-text">What payment methods do you accept?</span>
+                     <span class="q-icon" aria-hidden="true">+</span>
+                  </button>
+               </h3>
+               <div id="panel-3" class="accordion-panel" role="region" aria-labelledby="accordion-3" hidden>
+                  <p>We accept credit/debit cards, UPI, netbanking and cash on delivery (where available).</p>
+               </div>
+            </div>
+
+            <div class="accordion-item">
+               <h3 class="accordion-question">
+                  <button type="button" class="accordion-toggle" aria-expanded="false" aria-controls="panel-4"
+                     id="accordion-4">
+                     <span class="q-text">Do you offer any discounts or promotions?</span>
+                     <span class="q-icon" aria-hidden="true">+</span>
+                  </button>
+               </h3>
+               <div id="panel-4" class="accordion-panel" role="region" aria-labelledby="accordion-4" hidden>
+                  <p>Yes — check the homepage banners and your account for personalized offers. New users often get
+                     welcome discounts.</p>
+               </div>
+            </div>
+
+            <div class="accordion-item">
+               <h3 class="accordion-question">
+                  <button type="button" class="accordion-toggle" aria-expanded="false" aria-controls="panel-5"
+                     id="accordion-5">
+                     <span class="q-text">How can I provide feedback about my experience?</span>
+                     <span class="q-icon" aria-hidden="true">+</span>
+                  </button>
+               </h3>
+               <div id="panel-5" class="accordion-panel" role="region" aria-labelledby="accordion-5" hidden>
+                  <p>You can leave feedback via the app/website under Order History, or email
+                     support@greenbasket.example with your order details.</p>
+               </div>
+            </div>
+
+            <div class="accordion-item">
+               <h3 class="accordion-question">
+                  <button type="button" class="accordion-toggle" aria-expanded="false" aria-controls="panel-6"
+                     id="accordion-6">
+                     <span class="q-text">Do you offer bulk ordering for events or businesses?</span>
+                     <span class="q-icon" aria-hidden="true">+</span>
+                  </button>
+               </h3>
+               <div id="panel-6" class="accordion-panel" role="region" aria-labelledby="accordion-6" hidden>
+                  <p>Yes — we provide bulk ordering and business accounts. Contact our sales team at
+                     sales@greenbasket.example for volume pricing and delivery planning.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+   <!-- HAPPY CUSTOMERS ROW -->
+   <section class="happy-customers" aria-label="Happy customers">
+      <div class="container happy-customers-container">
+         <div class="happy-customer-list" aria-hidden="false">
+            <div class="happy-customer-item">
+               <figure>
+                  <img src="assets/images/users/happy-customer1.png" alt="Happy customer 1 with groceries"
+                     loading="lazy" width="260" height="220">
+               </figure>
+            </div>
+            <div class="happy-customer-item">
+               <figure>
+                  <img src="assets/images/users/happy-customer2.png" alt="Happy customer 2 with groceries"
+                     loading="lazy" width="260" height="220">
+               </figure>
+            </div>
+            <div class="happy-customer-item">
+               <figure>
+                  <img src="assets/images/users/happy-customer3.png" alt="Happy customer 3 with groceries"
+                     loading="lazy" width="260" height="220">
+               </figure>
+            </div>
+            <div class="happy-customer-item">
+               <figure>
+                  <img src="assets/images/users/happy-customer4.png" alt="Happy customer 4 with groceries"
+                     loading="lazy" width="260" height="220">
+               </figure>
+            </div>
+            <div class="happy-customer-item">
+               <figure>
+                  <img src="assets/images/users/happy-customer5.png" alt="Happy customer 5 with groceries"
+                     loading="lazy" width="260" height="220">
+               </figure>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- end happy customers -->
+
+
+   <!--Newsletter section-->
+   <section class="newsletter" aria-label="Subscribe to our newsletter">
+      <div class="container newsletter-container">
+         <article class="newsletter-contains">
+            <h3 class="header-newsletter">Our Newsletter</h3>
+            <h2 class="newsletter-header">
+               Subscribe to our Newsletter to <br> Get <span class="highlight-text-newsletter">Updates on Our Latest
+                  Offers</span>
+            </h2>
+
+            <p class="newsletter-promo">Get 25% off on your first order by subscribing to our newsletter</p>
+
+            <form id="newsletterForm" class="newsletter-form" novalidate>
+
+               <input id="newsletter-email" name="email" type="email" class="newsletter-input"
+                  placeholder="Enter Email Address" required aria-required="true" autocomplete="email">
+
+               <button type="submit" class="subs-btn" aria-label="Subscribe to newsletter">Subscribe</button>
+
+               <div id="newsletterStatus" class="newsletter-status" role="status" aria-live="polite"></div>
+            </form>
+         </article>
+      </div>
+   </section>
+
+
+
+
+   <!-- SITE FOOTER -->
+   <footer class="site-footer" role="contentinfo" aria-label="Footer">
+      <div class="container footer-container">
+         <div class="footer-top">
+            <div class="footer-brand">
+               <img src="assets/images/HubSpot Brand Kit/Logo/SVG/shopping-bag.png" alt="GreenBasket logo"
+                  class="footer-logo" width="48" height="48">
+               <div class="brand-text">
+                  <strong class="brand-name">GreenBasket.</strong>
+                  <p class="brand-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                     incididunt ut labore et dolore magna.</p>
+                  <div class="social-icons">
+                     <a href="#" aria-label="Facebook"><img src="assets/images/HubSpot Brand Kit/Logo/JPEG/facebook.png"
+                           alt="facebook" width="28" height="28"></a>
+                     <a href="#" aria-label="Twitter"><img src="assets/images/HubSpot Brand Kit/Logo/JPEG/twitter.png"
+                           alt="twitter" width="28" height="28"></a>
+                     <a href="#" aria-label="Instagram"><img
+                           src="assets/images/HubSpot Brand Kit/Logo/JPEG/instagram.png" alt="instagram" width="28"
+                           height="28"></a>
+                     <a href="#" aria-label="Pinterest"><img
+                           src="assets/images/HubSpot Brand Kit/Logo/JPEG/pinterest.png" alt="pinterest" width="28"
+                           height="28"></a>
+                  </div>
+               </div>
+            </div>
+
+            <div class="footer-links">
+               <div class="footer-col">
+                  <h4>Company</h4>
+                  <ul>
+                     <li><a href="about.html">About Us</a></li>
+                     <li><a href="#">Blog</a></li>
+                     <li><a href="#">Contact Us</a></li>
+                     <li><a href="#">Careers</a></li>
+                  </ul>
+               </div>
+
+               <div class="footer-col">
+                  <h4>Customer Services</h4>
+                  <ul>
+                     <li><a href="myaccount.html">My Account</a></li>
+                     <li><a href="#">Track Your Order</a></li>
+                     <li><a href="#">Returns</a></li>
+                     <li><a href="#">FAQ</a></li>
+                  </ul>
+               </div>
+
+               <div class="footer-col">
+                  <h4>Our Information</h4>
+                  <ul>
+                     <li><a href="#">Privacy</a></li>
+                     <li><a href="#">Terms & Conditions</a></li>
+                     <li><a href="#">Return Policy</a></li>
+                  </ul>
+               </div>
+
+               <div class="footer-col contact-col">
+                  <h4>Contact Info</h4>
+                  <address>
+                     <p>+0123-456-789</p>
+                     <p>example@gmail.com</p>
+                     <p>8502 Preston Rd.<br>Inglewood, Maine 98380</p>
+                  </address>
+               </div>
+            </div>
+         </div>
+
+         <div class="footer-bottom">
+            <p>Copyright © 2024 <strong>GreenBasket</strong> Website Design. All Rights Reserved.</p>
+            <div class="footer-controls">
+               <select aria-label="Language selector" class="footer-select">
+                  <option>English</option>
+                  <option>Español</option>
+               </select>
+               <select aria-label="Currency selector" class="footer-select">
+                  <option>USD</option>
+
+               </select>
+            </div>
+         </div>
+      </div>
+   </footer>
+
+   <!-- end footer -->
+
+   <script src="scripts.js"></script>
+</body>
+
+</html>

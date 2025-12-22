@@ -1,0 +1,253 @@
+/* Coming Soon Page Styles */
+
+body {
+   margin: 0;
+   padding: 0;
+   font-family: 'Inter', sans-serif;
+   color: #333;
+   overflow-x: hidden;
+}
+
+.cs-container {
+   display: flex;
+   min-height: 100vh;
+   width: 100%;
+}
+
+/* Left Content Side */
+.cs-content {
+   flex: 1;
+   padding: 60px 80px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   max-width: 50%;
+   background-color: #fff;
+}
+
+.cs-logo-wrapper {
+   margin-bottom: 60px;
+}
+
+.cs-logo-link {
+   display: flex;
+   align-items: center;
+   text-decoration: none;
+   gap: 10px;
+}
+
+.cs-logo-icon {
+   width: 40px;
+   height: auto;
+}
+
+.cs-logo-text {
+   font-family: 'Poppins', sans-serif;
+   font-weight: 700;
+   font-size: 24px;
+   color: #111;
+}
+
+.cs-text-block {
+   margin-bottom: 50px;
+}
+
+.cs-badge {
+   display: inline-block;
+   color: #666;
+   font-size: 16px;
+   margin-bottom: 10px;
+   font-family: 'Poppins', sans-serif;
+}
+
+.cs-heading {
+   font-family: 'Poppins', sans-serif;
+   font-size: 48px;
+   font-weight: 700;
+   line-height: 1.2;
+   color: #111;
+   margin: 0;
+}
+
+.cs-heading .highlight {
+   color: #1f7a45;
+   /* Brand Green */
+}
+
+/* Timer */
+.cs-timer {
+   display: flex;
+   align-items: flex-start;
+   gap: 30px;
+   margin-bottom: 50px;
+}
+
+.timer-box {
+   text-align: center;
+}
+
+.time-val {
+   display: block;
+   font-family: 'Poppins', sans-serif;
+   font-size: 48px;
+   font-weight: 600;
+   color: #111;
+   line-height: 1;
+   margin-bottom: 5px;
+}
+
+.time-label {
+   font-size: 14px;
+   color: #666;
+   text-transform: capitalize;
+}
+
+/* Subscription Form */
+.cs-subscribe {
+   max-width: 500px;
+   margin-bottom: 60px;
+}
+
+.sub-label {
+   font-size: 15px;
+   color: #555;
+   margin-bottom: 15px;
+}
+
+.sub-form {
+   display: flex;
+   gap: 15px;
+}
+
+.sub-input {
+   flex: 1;
+   padding: 14px 20px;
+   border: 1px solid #e0e0e0;
+   border-radius: 30px;
+   font-size: 15px;
+   outline: none;
+   font-family: 'Inter', sans-serif;
+}
+
+.sub-input:focus {
+   border-color: #1f7a45;
+}
+
+.sub-btn {
+   background-color: #1f7a45;
+   color: white;
+   border: none;
+   padding: 14px 30px;
+   border-radius: 30px;
+   font-size: 15px;
+   font-weight: 600;
+   cursor: pointer;
+   font-family: 'Poppins', sans-serif;
+   transition: background-color 0.2s;
+}
+
+.sub-btn:hover {
+   background-color: #166037;
+}
+
+/* Footer */
+.cs-footer {
+   margin-top: auto;
+}
+
+.cs-socials {
+   display: flex;
+   gap: 15px;
+   margin-bottom: 20px;
+}
+
+.social-circle {
+   width: 40px;
+   height: 40px;
+   background-color: #f6cc45;
+   /* Brand Yellow */
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: transform 0.2s;
+}
+
+.social-circle:hover {
+   transform: translateY(-3px);
+}
+
+.social-circle img {
+   width: 18px;
+   height: 18px;
+   /* Optional: filter to make icons darker if needed, currently original colors */
+   filter: brightness(0);
+   /* Make black */
+}
+
+.cs-copyright {
+   font-size: 13px;
+   color: #777;
+   margin: 0;
+}
+
+
+/* Right Image Side */
+.cs-image-side {
+   flex: 1;
+   position: relative;
+   background-color: #f8f8f8;
+   overflow: hidden;
+}
+
+.cs-bg-image {
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-position: center;
+   /* Adjust positioning to focus on the person */
+   background-position: center top;
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+   .cs-heading {
+      font-size: 36px;
+   }
+
+   .time-val {
+      font-size: 36px;
+   }
+
+   .cs-content {
+      padding: 40px;
+   }
+}
+
+@media (max-width: 768px) {
+   .cs-container {
+      flex-direction: column;
+   }
+
+   .cs-content {
+      max-width: 100%;
+      order: 2;
+      /* Image on top? or content on top. Let's keep content top for mobile usually or image. Design has image right on desktop. */
+      order: 0;
+      padding: 40px 20px;
+   }
+
+   .cs-image-side {
+      height: 400px;
+      flex: none;
+   }
+
+   .sub-form {
+      flex-direction: column;
+   }
+
+   .sub-btn {
+      width: 100%;
+   }
+}
