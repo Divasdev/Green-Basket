@@ -8,7 +8,7 @@ const futureDate = document.getElementById("promo-timer");
 const endTime = new Date(futureDate.dataset.endsAt).getTime();
 
 
-
+ const CartBadge=document.querySelector(".cart-badge");
 
 
 function setTimer() {
@@ -48,20 +48,50 @@ addProducts.forEach(button => {
    button.addEventListener("click", (e) => {
 
       const clickedButton = e.currentTarget;
-      const productCard = clickedButton.closest('.product-body');
-      const productName = productCard.querySelector(".product-name").textContent;
-      const productPrice = productCard.querySelector(".product-price").textContent;
-      console.log(productName, productPrice);
-      console.log("add To cart button clicked");
+      const productCard = clickedButton.closest('.product-body')
+      ;
+      const productName = productCard.querySelector(".product-name").textContent
+      .trim();
+      const productPrice = productCard.querySelector(".product-price").textContent
+      .trim();
+     
+     
+       
+
+     const product={
+          name:productName,
+          price:productPrice
+     };
+     let cart =localStorage.getItem("cart");
+
+
+     if (cart){
+      cart = JSON.parse(cart);
+
+     } else{
+      cart=[];
+     }
+     cart.push(product);
+
+     localStorage.setItem("cart", JSON.stringify(cart));
+
+     console.log("cart Saved:", cart);
+      cartLength=cart.length;
+       
+   
+     CartBadge.textContent=cartLength;
+    
+     clickedButton.textContent = "Added To Cart";
+
 
    });
 });
 
+const savedCart = localStorage.getItem("cart");
 
-
-
-
-
-
-
-
+if (savedCart) {
+  const cart = JSON.parse(savedCart);
+  CartBadge.textContent = cart.length;
+} else {
+  cartBadge.textContent = 0;
+}
