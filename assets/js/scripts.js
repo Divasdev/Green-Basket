@@ -242,6 +242,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initWishlist();
   initSearch();
   initRecentlyViewed();
+  initTestimonials();
 
   // Back to Top Logic
   const backToTopBtn = document.getElementById("backToTop");
@@ -261,3 +262,62 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+/* =========================================
+   6. TESTIMONIALS AUTO-PLAY
+   ========================================= */
+function initTestimonials() {
+  const avatars = document.querySelectorAll(".avatar-img");
+  const testimonials = [
+    {
+      text: "“I love browsing the fresh vegetables section! The layout is so clean and easy to navigate on my phone. The 20% discount on first order was a sweet bonus.”",
+      name: "Sarah Jenkins",
+      role: "Verified Buyer"
+    },
+    {
+      text: "“The weekly deals are a lifesaver. I check the homepage every Monday. Delivery is super fast, and the fruits are always fresh.”",
+      name: "Michael Chen",
+      role: "Loyal Customer"
+    },
+    {
+      text: "“Finally a grocery app that doesn't feel cluttered. Found my favorite organic milk in seconds. The wishlist feature is super handy!”",
+      name: "Emma Watson",
+      role: "Health Enthusiast"
+    }
+  ];
+
+  const textEl = document.querySelector(".testimonial-text p");
+  const nameEl = document.querySelector(".customer-name");
+  const roleEl = document.querySelector(".customer-role");
+
+  if (!textEl || !nameEl) return;
+
+  let currentIndex = 0;
+
+  // Auto-rotate every 5 seconds
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % testimonials.length;
+    updateTestimonial(currentIndex);
+  }, 5000);
+
+  function updateTestimonial(index) {
+    // Fade out
+    textEl.style.opacity = 0;
+    nameEl.style.opacity = 0;
+
+    setTimeout(() => {
+      const t = testimonials[index];
+      textEl.textContent = t.text;
+      nameEl.textContent = t.name;
+      if (roleEl) roleEl.textContent = t.role;
+
+      // Update avatars (simple visual shift simulation)
+      avatars.forEach(img => img.classList.remove("avatar-center"));
+      avatars[2].classList.add("avatar-center"); // Keep center valid
+
+      // Fade in
+      textEl.style.opacity = 1;
+      nameEl.style.opacity = 1;
+    }, 300);
+  }
+}
