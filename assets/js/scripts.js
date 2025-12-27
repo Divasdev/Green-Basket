@@ -286,9 +286,9 @@ function initTestimonials() {
     }
   ];
 
-  const textEl = document.querySelector(".testimonial-text p");
-  const nameEl = document.querySelector(".customer-name");
-  const roleEl = document.querySelector(".customer-role");
+  const textEl = document.querySelector(".testimonial-text");
+  const nameEl = document.querySelector(".author-name");
+  const roleEl = document.querySelector(".author-role");
 
   if (!textEl || !nameEl) return;
 
