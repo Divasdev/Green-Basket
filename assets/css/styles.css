@@ -1488,6 +1488,9 @@ header {
   display: flex;
   align-items: center;
   gap: 10px;
+  width: auto;
+  /* Prevent stretching */
+  max-width: fit-content;
   transition: 0.2s ease-in-out;
 }
 
@@ -1811,7 +1814,11 @@ header {
 
 .discount-card {
   background-image: url(Images/hero_background_pattern.png);
-  width: 90%;
+  /* width: 90%; Removed to allow flex sizing on desktop */
+  flex: 1;
+  /* Take available space */
+  max-width: 600px;
+  /* Cap width */
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -2154,16 +2161,30 @@ header {
   font-weight: 200;
   margin-top: 0;
   margin-left: 40px;
-  box-sizing: border-box;
-
 }
+
+.blog-card {
+  flex: 1 1 300px;
+  /* Allow growing/shrinking with base of 300px */
+  max-width: 400px;
+  /* Don't get too wide */
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  /* Optional polish */
+}
+
+
 
 .read-more {
   color: #166037;
 
 }
 
-.css
+
 
 /* ===== FAQ / ACCORDION STYLES (added to match provided design) ===== */
 .faq-section {
@@ -2670,6 +2691,12 @@ header {
     flex-direction: column;
     padding: 40px 10px;
     margin: 20px 0;
+  }
+
+  .discount-card {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
   }
 
   .promo-side {
