@@ -57,7 +57,7 @@ function initCart() {
     button.addEventListener("click", (e) => {
       const clickedButton = e.currentTarget;
       const productCard = clickedButton.closest(".product-card") || clickedButton.closest(".product-body"); // Fallback for different layouts
-      
+
       if (!productCard) return;
 
       const productName = productCard.querySelector(".product-name")?.textContent.trim();
@@ -68,12 +68,12 @@ function initCart() {
         const product = {
           name: productName,
           price: productPrice,
-          image: productImage || "assets/images/default-product.png" 
+          image: productImage || "assets/images/default-product.png"
         };
 
         // Save to Cart
         addToLocalStorage("cart", product);
-        
+
         // Update Badge
         updateCartBadge();
 
@@ -113,8 +113,8 @@ function initWishlist() {
     // Set initial state
     if (wishlist.some(item => item.name === productName)) {
       btn.classList.add("active");
-       // Optional: Change icon source if you have a filled heart icon
-       // btn.querySelector("img").src = "assets/images/heart-filled.png";
+      // Optional: Change icon source if you have a filled heart icon
+      // btn.querySelector("img").src = "assets/images/heart-filled.png";
     }
 
     btn.addEventListener("click", (e) => {
@@ -127,7 +127,7 @@ function initWishlist() {
       if (!name) return;
 
       const item = { name, price, image };
-      
+
       // Toggle logic
       const currentWishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
       const exists = currentWishlist.find(i => i.name === name);
@@ -191,25 +191,25 @@ function initRecentlyViewed() {
 
 function addToRecentlyViewed(product) {
   let recent = JSON.parse(localStorage.getItem("recentlyViewed")) || [];
-  
+
   // Remove duplicates (move to top)
   recent = recent.filter(p => p.name !== product.name);
-  
+
   // Add new to start
   recent.unshift(product);
-  
+
   // Limit to 5 items
   if (recent.length > 5) recent.pop();
-  
+
   localStorage.setItem("recentlyViewed", JSON.stringify(recent));
   renderRecentlyViewed();
 }
 
 function renderRecentlyViewed() {
   if (!recentDropdown) return;
-  
+
   const recent = JSON.parse(localStorage.getItem("recentlyViewed")) || [];
-  
+
   if (recent.length === 0) {
     recentDropdown.innerHTML = '<li style="padding:10px; font-size:13px; color:#666;">No recent items</li>';
     return;
@@ -242,4 +242,22 @@ document.addEventListener("DOMContentLoaded", () => {
   initWishlist();
   initSearch();
   initRecentlyViewed();
+
+  // Back to Top Logic
+  const backToTopBtn = document.getElementById("backToTop");
+  if (backToTopBtn) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add("show");
+      } else {
+        backToTopBtn.classList.remove("show");
+      }
+    });
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  }
 });

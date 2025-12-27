@@ -1,4 +1,8 @@
 /* ===== BASE STYLES ===== */
+html {
+  scroll-behavior: smooth;
+}
+
 h1,
 h2,
 h3,
@@ -20,6 +24,34 @@ textarea {
   width: 100%;
   overflow-x: hidden;
   /* Prevent horizontal scroll globally */
+}
+
+/* ===== OVERLAP & DROPDOWN FIXES ===== */
+header {
+  overflow: visible !important;
+  /* Allow dropdowns to spill out */
+}
+
+.bottom-nav {
+  z-index: 10001 !important;
+  /* Force on top of Hero */
+}
+
+.hero-section {
+  z-index: 1 !important;
+  /* Lower than header */
+}
+
+.item-categories {
+  position: relative;
+  z-index: 5;
+  /* Ensure above Hero background if overlapped */
+}
+
+.category-card {
+  cursor: pointer;
+  position: relative;
+  z-index: 6;
 }
 
 /* ===== TOP HEADER BAR ===== */
@@ -173,74 +205,50 @@ header {
 
 /* Ensure bottom header container allows wrapping on mobile */
 @media (max-width: 900px) {
-  .bottom-header-container {
-    flex-wrap: wrap;
-    /* Allow nav to break to new line */
-    position: relative;
-    padding: 10px;
-    z-index: 1001;
-    /* Ensure header sits above hero section */
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 15px;
   }
 
-  .browsediv {
+  .header-left {
     width: 100%;
-    /* Full width button on mobile */
-  }
-
-  /* Revert to display: none which worked previously */
-  .menu-toggle {
-    display: none;
-  }
-
-  .browse {
-    width: 100%;
-    display: flex;
     justify-content: center;
+    margin-bottom: 5px;
+  }
+
+  .logo {
+    margin-bottom: 0;
+    display: flex;
     align-items: center;
     gap: 10px;
-    background-color: #f2c94c;
-    /* Yellow background */
-    color: #000;
-    font-weight: 600;
-    cursor: pointer;
-    user-select: none;
+    justify-content: center;
   }
 
-  .bottom-nav {
+  .location-box {
     display: none;
-    /* Hide nav by default on mobile */
-    width: 100%;
-    background-color: #ffffff;
-    /* Solid white background */
-    border-top: 1px solid #e0e0e0;
-    padding: 10px 0;
-    margin-top: 10px;
-    border-radius: 8px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    /* Stronger shadow */
-    z-index: 9999;
-    /* Ensure dropdown sits on top of EVERYTHING */
-    position: absolute;
-    /* Float above content instead of pushing it */
-    top: 100%;
-    /* Position directly below the header row */
-    left: 0;
   }
 
-  /* Show nav when checkbox is checked - SIMPLIFIED without animation */
-  #menu-toggle:checked~.bottom-nav {
-    display: block !important;
+  .search-area {
+    width: 100%;
+    order: 2;
+    margin: 5px 0 15px;
+  }
+
+  .header-right {
+    width: 100%;
+    justify-content: space-evenly;
+    order: 3;
+    gap: 0;
   }
 
   .nav-list {
     display: flex;
-    /* Ensure flex layout is maintained */
     flex-direction: column;
     gap: 0;
     margin: 0;
-    /* Reset margins */
     padding: 0;
-    /* Reset padding */
   }
 
   .nav-list li {
@@ -283,8 +291,8 @@ header {
   }
 
   .header-right img {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
   }
 
   .icon-label {
@@ -1659,6 +1667,60 @@ header {
   font-weight: 800;
   color: #111;
 }
+
+/* Product Card Hover Effect */
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Category Card Hover Effect */
+.category-card {
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #1f7a45;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  /* Flex to center content */
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  z-index: 2000;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background-color: #166037;
+  transform: translateY(-3px);
+}
+
 
 .product-oldprice {
   font-size: 14px;
