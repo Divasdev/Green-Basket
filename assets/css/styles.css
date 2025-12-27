@@ -726,11 +726,15 @@ header {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  transition: color 0.2s;
+  transition: all 0.3s ease;
+  padding: 18px 40px;
+  border: 1px solid #2f4854;
+  border-radius: 50px;
 }
 
 .view-all-products:hover {
-  color: #1f7a45;
+  background-color: #2f4854;
+  color: #ffffff;
 }
 
 .hero-image-container {
@@ -1068,7 +1072,9 @@ header {
   }
 
   .hero-buttons {
-    flex-direction: column;
+    flex-direction: row;
+    /* Keep in row if possible, or wrap */
+    justify-content: center;
     gap: 20px;
   }
 
@@ -1245,12 +1251,14 @@ header {
   }
 
   .hero-buttons {
-    width: 100%;
+    /* width: 100%; Removed */
+    justify-content: center;
   }
 
   .hero-shopnow-btn {
-    width: 100%;
-    max-width: 320px;
+    /* Retain natural width */
+    width: auto;
+    max-width: none;
   }
 
   .item-card-header2 {
