@@ -10,7 +10,11 @@ h3,
 body,
 nav,
 .small-text,
-.labels {
+.labels,
+input,
+button,
+select,
+textarea {
   font-family: "Inter", sans-serif;
   margin: 0;
 }
@@ -1555,6 +1559,16 @@ header {
   box-shadow: 0 8px 18px rgba(12, 18, 20, 0.05);
   cursor: pointer;
   padding: 6px;
+  transition: transform 0.2s ease;
+}
+
+.wishlist-btn:hover {
+  transform: scale(1.1);
+}
+
+.wishlist-btn.active .wishlisticon-productscard {
+  /* Turn icon red */
+  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
 }
 
 /* body text area */
@@ -2022,6 +2036,10 @@ header {
 
 .blog-grid {
   display: flex;
+  flex-wrap: wrap;
+  /* Allow wrapping on small screens */
+  justify-content: center;
+  gap: 20px;
 }
 
 .blog-meta {
@@ -2293,7 +2311,9 @@ header {
 .newsletter {
   background-image: url(Images/hero_background_pattern.png);
   text-align: center;
-  padding: 100px;
+  padding: 100px 20px;
+  /* Reduce side padding */
+  background-size: cover;
 }
 
 .header-newsletter {
@@ -2316,12 +2336,18 @@ header {
 }
 
 .newsletter-input {
-  width: 400px;
+  width: 100%;
+  /* Responsive width */
+  max-width: 400px;
+  /* Cap max width */
   padding: 18px;
   border-radius: 30px;
   border-width: 0.5px;
-
+  box-sizing: border-box;
+  /* Include padding in width */
 }
+
+
 
 .subs-btn {
   width: 100px;
@@ -2337,7 +2363,8 @@ header {
 .site-footer {
   background-color: #1f7a45;
   color: #fff;
-  padding: 80px 0 30px;
+  padding: 60px 0 30px;
+  /* Sane top padding */
   font-family: "Inter", sans-serif;
   margin-top: 0;
 }
@@ -2544,6 +2571,21 @@ header {
 }
 
 @media (max-width: 600px) {
+  .newsletter {
+    padding: 60px 15px;
+    /* Less padding on mobile */
+  }
+
+  .blog-card {
+    width: 100%;
+    /* Stacks nicely */
+  }
+
+  .blog-media img {
+    width: 100%;
+    height: auto;
+  }
+
   .footer-links {
     flex-direction: column;
     gap: 30px;
