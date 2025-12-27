@@ -243,6 +243,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initSearch();
   initRecentlyViewed();
   initTestimonials();
+  initRatingPopup();
 
   // Back to Top Logic
   const backToTopBtn = document.getElementById("backToTop");
@@ -320,4 +321,71 @@ function initTestimonials() {
       nameEl.style.opacity = 1;
     }, 300);
   }
+}
+
+/* =========================================
+   7. RATING POPUP LOGIC
+   ========================================= */
+function initRatingPopup() {
+  const modal = document.getElementById("ratingModal");
+  if (!modal) return;
+
+  const closeBtn = modal.querySelector(".close-rating");
+  const stars = modal.querySelectorAll(".star");
+  const submitBtn = document.getElementById("submitRating");
+  const messageEl = document.getElementById("ratingMessage");
+  let currentRating = 0;
+
+  // Show modal after 2 seconds for testing
+  setTimeout(() => {
+    modal.classList.add("show");
+    modal.setAttribute("aria-hidden", "false");
+  }, 2000);
+
+  // Close functionality
+  function closeModal() {
+    modal.classList.remove("show");
+    modal.setAttribute("aria-hidden", "true");
+  }
+
+  closeBtn.addEventListener("click", closeModal);
+
+  // Close on outside click
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  // Star Rating Logic
+  stars.forEach(star => {
+    star.addEventListener("click", () => {
+      const value = parseInt(star.getAttribute("data-value"));
+      currentRating = value;
+      
+      // Update visual state
+      stars.forEach(s => {
+        const sValue = parseInt(s.getAttribute("data-value"));
+        if (sValue <= value) {
+          s.classList.add("active");
+        } else {
+          s.classList.remove("active");
+        }
+      });
+
+      // Enable submit
+      submitBtn.disabled = false;
+      messageEl.textContent = "You selected " + value + " star" + (value > 1 ? "s" : "");
+    });
+  });
+
+  // Submit Logic
+  submitBtn.addEventListener("click", () => {
+    // Simulate submission
+    submitBtn.textContent = "Submitting...";
+    submitBtn.disabled = true;
+
+    setTimeout(() => {
+      modal.innerHTML = '<div class="rating-content"><h3>Thank You!</h3><p>We appreciate your feedback.</p></div>';
+      setTimeout(closeModal, 2000);
+    }, 1000);
+  });
 }

@@ -1179,6 +1179,24 @@
       ↑
    </button>
 
+   <!-- Rating Popup -->
+   <div id="ratingModal" class="rating-modal" aria-hidden="true">
+      <div class="rating-content">
+         <button class="close-rating" aria-label="Close rating popup">&times;</button>
+         <h3>Rate this Project</h3>
+         <p>How would you rate your experience?</p>
+         <div class="stars">
+            <button class="star" data-value="1" aria-label="1 star">★</button>
+            <button class="star" data-value="2" aria-label="2 stars">★</button>
+            <button class="star" data-value="3" aria-label="3 stars">★</button>
+            <button class="star" data-value="4" aria-label="4 stars">★</button>
+            <button class="star" data-value="5" aria-label="5 stars">★</button>
+         </div>
+         <p id="ratingMessage" class="rating-message"></p>
+         <button id="submitRating" class="submit-rating-btn" disabled>Submit</button>
+      </div>
+   </div>
+
    <script src="assets/js/scripts.js"></script>
 </body>
 
