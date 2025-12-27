@@ -336,11 +336,14 @@ function initRatingPopup() {
   const messageEl = document.getElementById("ratingMessage");
   let currentRating = 0;
 
-  // Show modal after 2 seconds for testing
-  setTimeout(() => {
-    modal.classList.add("show");
-    modal.setAttribute("aria-hidden", "false");
-  }, 2000);
+  // Show modal every 10 seconds (recurrence)
+  setInterval(() => {
+    // Only show if not currently open to avoid stacking or weirdness
+    if (!modal.classList.contains("show")) {
+      modal.classList.add("show");
+      modal.setAttribute("aria-hidden", "false");
+    }
+  }, 10000);
 
   // Close functionality
   function closeModal() {
@@ -360,7 +363,7 @@ function initRatingPopup() {
     star.addEventListener("click", () => {
       const value = parseInt(star.getAttribute("data-value"));
       currentRating = value;
-      
+
       // Update visual state
       stars.forEach(s => {
         const sValue = parseInt(s.getAttribute("data-value"));
