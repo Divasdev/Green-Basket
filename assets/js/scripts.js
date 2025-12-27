@@ -382,13 +382,46 @@ function initRatingPopup() {
 
   // Submit Logic
   submitBtn.addEventListener("click", () => {
-    // Simulate submission
-    submitBtn.textContent = "Submitting...";
+    submitBtn.textContent = "Sending...";
     submitBtn.disabled = true;
 
-    setTimeout(() => {
-      modal.innerHTML = '<div class="rating-content"><h3>Thank You!</h3><p>We appreciate your feedback.</p></div>';
-      setTimeout(closeModal, 2000);
-    }, 1000);
+    // --- EMAILJS CONFIGURATION ---
+    // Get these from: https://dashboard.emailjs.com/
+    const serviceID = "YOUR_SERVICE_ID";   // e.g. "service_xyz"
+    const templateID = "YOUR_TEMPLATE_ID"; // e.g. "template_abc"
+    const publicKey = "YOUR_PUBLIC_KEY";   // e.g. "user_123"
+
+    // Initialize EmailJS
+    if (typeof emailjs !== "undefined") {
+      emailjs.init(publicKey);
+    }
+
+    const templateParams = {
+      rating: currentRating,
+      message: "User submitted a rating from the website." // You can add a textarea if you want
+    };
+
+    if (serviceID === "YOUR_SERVICE_ID") {
+      // Fallback for demo when keys aren't set
+      console.log("EmailJS keys not set. Simulating success.");
+      setTimeout(() => {
+        modal.innerHTML = '<div class="rating-content"><h3>Thank You!</h3><p>We appreciate your feedback.</p></div>';
+        setTimeout(closeModal, 2000);
+      }, 1000);
+      return;
+    }
+
+    // Send Email
+    emailjs.send(serviceID, templateID, templateParams)
+      .then(() => {
+        modal.innerHTML = '<div class="rating-content"><h3>Thank You!</h3><p>Rating sent successfully!</p></div>';
+        setTimeout(closeModal, 2000);
+      })
+      .catch((err) => {
+        console.error("EmailJS Error:", err);
+        submitBtn.textContent = "Error";
+        messageEl.textContent = "Failed to send. Check console.";
+        submitBtn.disabled = false;
+      });
   });
 }
