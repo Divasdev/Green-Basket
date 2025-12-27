@@ -205,6 +205,8 @@ header {
 
 /* Ensure bottom header container allows wrapping on mobile */
 @media (max-width: 900px) {
+
+  /* --- 1. Main Header Layout (Logo, Search, Icons) --- */
   .header-container {
     flex-direction: column;
     align-items: center;
@@ -215,15 +217,23 @@ header {
   .header-left {
     width: 100%;
     justify-content: center;
+    /* Center the group */
     margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+  }
+
+  /* Force logo image and text to behave as a centered unit */
+  .header-left .logosvg {
+    margin: 0;
   }
 
   .logo {
     margin-bottom: 0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    justify-content: center;
+    margin-left: 0;
+    text-align: center;
   }
 
   .location-box {
@@ -234,6 +244,14 @@ header {
     width: 100%;
     order: 2;
     margin: 5px 0 15px;
+    box-sizing: border-box;
+    /* Prevent rubber stretching */
+  }
+
+  .search-input {
+    width: 100%;
+    box-sizing: border-box;
+    /* Ensure padding doesn't overflow width */
   }
 
   .header-right {
@@ -241,6 +259,71 @@ header {
     justify-content: space-evenly;
     order: 3;
     gap: 0;
+    display: flex;
+    /* Ensure flex is active */
+  }
+
+  .header-right img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .icon-label {
+    display: block;
+    font-size: 11px;
+    margin-top: 4px;
+    text-align: center;
+  }
+
+  /* --- 2. Bottom Header (Browse Categories & Menu) --- */
+  .bottom-header-container {
+    flex-wrap: wrap;
+    position: relative;
+    padding: 10px;
+    z-index: 1001;
+  }
+
+  .browsediv {
+    width: 100%;
+  }
+
+  .browse {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #f2c94c;
+    color: #000;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* Menu Toggle Logic (Re-implemented) */
+  .menu-toggle {
+    display: none;
+    /* Hide actual checkbox */
+  }
+
+  .bottom-nav {
+    display: none;
+    /* Hidden by default */
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 9999;
+  }
+
+  #menu-toggle:checked~.bottom-nav {
+    display: block !important;
   }
 
   .nav-list {
@@ -279,25 +362,6 @@ header {
 
   .recently-viewed {
     display: none;
-  }
-
-  /* Header Icons adjustments for mobile */
-  .header-right {
-    gap: 15px;
-    /* Even spacing */
-    justify-content: space-evenly;
-    width: 100%;
-    /* Spread across available space */
-  }
-
-  .header-right img {
-    width: 28px;
-    height: 28px;
-  }
-
-  .icon-label {
-    display: block;
-    /* Show on mobile */
   }
 }
 
