@@ -386,10 +386,9 @@ function initRatingPopup() {
     submitBtn.disabled = true;
 
     // --- EMAILJS CONFIGURATION ---
-    // Get these from: https://dashboard.emailjs.com/
-    const serviceID = "YOUR_SERVICE_ID";   // e.g. "service_xyz"
-    const templateID = "YOUR_TEMPLATE_ID"; // e.g. "template_abc"
-    const publicKey = "YOUR_PUBLIC_KEY";   // e.g. "user_123"
+    const serviceID = "YOUR_SERVICE_ID";
+    const templateID = "YOUR_TEMPLATE_ID";
+    const publicKey = "YOUR_PUBLIC_KEY";
 
     // Initialize EmailJS
     if (typeof emailjs !== "undefined") {
@@ -398,12 +397,12 @@ function initRatingPopup() {
 
     const templateParams = {
       rating: currentRating,
-      message: "User submitted a rating from the website." // You can add a textarea if you want
+      message: "User submitted a rating from the website."
     };
 
     if (serviceID === "YOUR_SERVICE_ID") {
-      // Fallback for demo when keys aren't set
-      console.log("EmailJS keys not set. Simulating success.");
+      // Development mode fallback
+      console.log("EmailJS keys not set. Dev mode active.");
       setTimeout(() => {
         modal.innerHTML = '<div class="rating-content"><h3>Thank You!</h3><p>We appreciate your feedback.</p></div>';
         setTimeout(closeModal, 2000);
