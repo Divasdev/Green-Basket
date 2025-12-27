@@ -17,6 +17,9 @@ select,
 textarea {
   font-family: "Inter", sans-serif;
   margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+  /* Prevent horizontal scroll globally */
 }
 
 /* ===== TOP HEADER BAR ===== */
@@ -1697,8 +1700,14 @@ header {
 .discount-section {
   display: flex;
   justify-content: center;
-  margin: 30px;
+  margin: 30px auto;
+  /* Center it */
   padding: 60px;
+  max-width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  /* Allow wrapping */
+  gap: 20px;
 }
 
 .promo-side {
@@ -1795,10 +1804,11 @@ header {
   flex-wrap: wrap;
   /* allow items to wrap instead of overflowing */
   box-sizing: border-box;
-  padding: 16px;
-  /* reduce padding so total width doesn't overflow */
+  padding: 20px;
+  /* reduced padding */
   overflow-x: hidden;
-  /* hide any tiny subpixel overflow */
+  box-sizing: border-box;
+  /* Strict sizing */
 }
 
 .deal-promo {
@@ -2570,29 +2580,71 @@ header {
   }
 }
 
-@media (max-width: 600px) {
-  .newsletter {
-    padding: 60px 15px;
-    /* Less padding on mobile */
-  }
-
-  .blog-card {
-    width: 100%;
-    /* Stacks nicely */
-  }
-
-  .blog-media img {
-    width: 100%;
-    height: auto;
-  }
-
-  .footer-links {
+@media (max-width: 900px) {
+  .discount-section {
     flex-direction: column;
+    padding: 40px 10px;
+    margin: 20px 0;
+  }
+
+  .promo-side {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .left-image,
+  .right-image {
+    height: auto;
+    max-width: 80%;
+    /* Shrink images on mobile */
+  }
+
+  .deals-promo-container {
+    flex-direction: column-reverse;
+    /* Text on top, image on bottom usually better, or column */
+    text-align: center;
     gap: 30px;
   }
 
-  .footer-bottom {
-    flex-direction: column;
-    text-align: center;
+  .deal-promo {
+    align-items: center;
+    /* Center text/button */
+    margin: 0;
+    width: 100%;
   }
+
+  .promo-image {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .promo-image img {
+    max-width: 90%;
+  }
+}
+
+.newsletter {
+  padding: 60px 15px;
+  /* Less padding on mobile */
+}
+
+.blog-card {
+  width: 100%;
+  /* Stacks nicely */
+}
+
+.blog-media img {
+  width: 100%;
+  height: auto;
+}
+
+.footer-links {
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer-bottom {
+  flex-direction: column;
+  text-align: center;
+}
 }
