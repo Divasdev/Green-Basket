@@ -1,3 +1,4 @@
+@import "rating.css";
 /* ===== BASE STYLES ===== */
 html {
   scroll-behavior: smooth;
@@ -2889,4 +2890,3 @@ header {
   animation: fadeInUp 0.8s ease-out forwards;
   opacity: 0;
   /* Start hidden */
-}@import "rating.css";
