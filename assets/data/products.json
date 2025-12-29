@@ -1,0 +1,482 @@
+[
+  {
+    "id": 1,
+    "name": "Fresh Apple",
+    "category": "fruits",
+    "price": 2.99,
+    "unit": "kg",
+    "image": "assets/images/products/fruits/apple.png",
+    "rating": 5,
+    "inStock": true
+  },
+  {
+    "id": 2,
+    "name": "Banana",
+    "category": "fruits",
+    "price": 1.50,
+    "unit": "dozen",
+    "image": "assets/images/products/fruits/banana.png",
+    "rating": 4.5,
+    "inStock": true
+  },
+  {
+    "id": 3,
+    "name": "Grapes",
+    "category": "fruits",
+    "price": 3.20,
+    "unit": "kg",
+    "image": "assets/images/products/fruits/grapes.png",
+    "rating": 4.0,
+    "inStock": true
+  },
+  {
+    "id": 4,
+    "name": "Lemon",
+    "category": "fruits",
+    "price": 0.50,
+    "unit": "piece",
+    "image": "assets/images/products/fruits/lemon.png",
+    "rating": 4.5,
+    "inStock": true
+  },
+  {
+    "id": 5,
+    "name": "Mango",
+    "category": "fruits",
+    "price": 5.00,
+    "unit": "kg",
+    "image": "assets/images/products/fruits/mango.png",
+    "rating": 5.0,
+    "inStock": true
+  },
+  {
+    "id": 6,
+    "name": "Orange",
+    "category": "fruits",
+    "price": 3.50,
+    "unit": "kg",
+    "image": "assets/images/products/fruits/orange.png",
+    "rating": 4.2,
+    "inStock": true
+  },
+  {
+    "id": 7,
+    "name": "Pomegranate",
+    "category": "fruits",
+    "price": 4.80,
+    "unit": "kg",
+    "image": "assets/images/products/fruits/promegranate.png",
+    "rating": 4.6,
+    "inStock": true
+  },
+  {
+    "id": 8,
+    "name": "Strawberry",
+    "category": "fruits",
+    "price": 4.00,
+    "unit": "box",
+    "image": "assets/images/products/fruits/strawberry.png",
+    "rating": 4.8,
+    "inStock": true
+  },
+  {
+    "id": 9,
+    "name": "Watermelon",
+    "category": "fruits",
+    "price": 3.00,
+    "unit": "piece",
+    "image": "assets/images/products/fruits/watermelon.png",
+    "rating": 4.3,
+    "inStock": true
+  },
+  {
+    "id": 10,
+    "name": "Broccoli",
+    "category": "vegetables",
+    "price": 2.50,
+    "unit": "piece",
+    "image": "assets/images/products/vegetables/brocolli.png",
+    "rating": 4.5,
+    "inStock": true
+  },
+  {
+    "id": 11,
+    "name": "Capsicum",
+    "category": "vegetables",
+    "price": 1.80,
+    "unit": "kg",
+    "image": "assets/images/products/vegetables/capsicum.png",
+    "rating": 4.0,
+    "inStock": true
+  },
+  {
+    "id": 12,
+    "name": "Carrot",
+    "category": "vegetables",
+    "price": 1.20,
+    "unit": "kg",
+    "image": "assets/images/products/vegetables/carrot.png",
+    "rating": 4.2,
+    "inStock": true
+  },
+  {
+    "id": 13,
+    "name": "Cauliflower",
+    "category": "vegetables",
+    "price": 2.00,
+    "unit": "piece",
+    "image": "assets/images/products/vegetables/cauliflower.png",
+    "rating": 4.1,
+    "inStock": true
+  },
+  {
+    "id": 14,
+    "name": "Onion",
+    "category": "vegetables",
+    "price": 1.50,
+    "unit": "kg",
+    "image": "assets/images/products/vegetables/onion.png",
+    "rating": 4.0,
+    "inStock": true
+  },
+  {
+    "id": 15,
+    "name": "Potato",
+    "category": "vegetables",
+    "price": 1.00,
+    "unit": "kg",
+    "image": "assets/images/products/vegetables/potato.avif",
+    "rating": 4.2,
+    "inStock": true
+  },
+  {
+    "id": 16,
+    "name": "Fresh Spinach",
+    "category": "vegetables",
+    "price": 1.20,
+    "unit": "bunch",
+    "image": "assets/images/products/vegetables/spinach.png",
+    "rating": 4.5,
+    "inStock": true
+  },
+  {
+    "id": 17,
+    "name": "Tomato",
+    "category": "vegetables",
+    "price": 1.80,
+    "unit": "kg",
+    "image": "assets/images/products/vegetables/tomato.avif",
+    "rating": 4.3,
+    "inStock": true
+  },
+  {
+    "id": 18,
+    "name": "Bagel",
+    "category": "bakery",
+    "price": 1.50,
+    "unit": "piece",
+    "image": "assets/images/products/bakery/bagel.png",
+    "rating": 4.0,
+    "inStock": true
+  },
+  {
+    "id": 19,
+    "name": "Sincero Bread",
+    "category": "bakery",
+    "price": 2.50,
+    "unit": "pack",
+    "image": "assets/images/products/bakery/bread.png",
+    "rating": 4.5,
+    "inStock": true
+  },
+  {
+    "id": 20,
+    "name": "Chocolate Cake",
+    "category": "bakery",
+    "price": 15.00,
+    "unit": "piece",
+    "image": "assets/images/products/bakery/cake.png",
+    "rating": 4.8,
+    "inStock": true
+  },
+  {
+    "id": 21,
+    "name": "Cookies",
+    "category": "bakery",
+    "price": 4.00,
+    "unit": "box",
+    "image": "assets/images/products/bakery/cookies.png",
+    "rating": 4.6,
+    "inStock": true
+  },
+  {
+    "id": 22,
+    "name": "Croissant",
+    "category": "bakery",
+    "price": 2.20,
+    "unit": "piece",
+    "image": "assets/images/products/bakery/crossinant.png",
+    "rating": 4.7,
+    "inStock": true
+  },
+  {
+    "id": 23,
+    "name": "Donut",
+    "category": "bakery",
+    "price": 1.80,
+    "unit": "piece",
+    "image": "assets/images/products/bakery/donut.png",
+    "rating": 4.3,
+    "inStock": true
+  },
+  {
+    "id": 24,
+    "name": "Garlic Bread",
+    "category": "bakery",
+    "price": 3.00,
+    "unit": "pack",
+    "image": "assets/images/products/bakery/garlic-bread.png",
+    "rating": 4.5,
+    "inStock": true
+  },
+  {
+    "id": 25,
+    "name": "Muffin",
+    "category": "bakery",
+    "price": 2.00,
+    "unit": "piece",
+    "image": "assets/images/products/bakery/muffin.png",
+    "rating": 4.2,
+    "inStock": true
+  },
+  {
+    "id": 26,
+    "name": "Almonds",
+    "category": "dry-fruits",
+    "price": 12.00,
+    "unit": "200g",
+    "image": "assets/images/products/dry-fruits/almonds.png",
+    "rating": 5.0,
+    "inStock": true
+  },
+  {
+    "id": 27,
+    "name": "Cashews",
+    "category": "dry-fruits",
+    "price": 11.00,
+    "unit": "200g",
+    "image": "assets/images/products/dry-fruits/cashew.png",
+    "rating": 4.8,
+    "inStock": true
+  },
+  {
+    "id": 28,
+    "name": "Dates",
+    "category": "dry-fruits",
+    "price": 8.00,
+    "unit": "box",
+    "image": "assets/images/products/dry-fruits/dates.png",
+    "rating": 4.7,
+    "inStock": true
+  },
+  {
+    "id": 29,
+    "name": "Mixed Nuts",
+    "category": "dry-fruits",
+    "price": 14.00,
+    "unit": "pack",
+    "image": "assets/images/products/dry-fruits/mixed-nuts.png",
+    "rating": 4.9,
+    "inStock": true
+  },
+  {
+    "id": 30,
+    "name": "Peanuts",
+    "category": "dry-fruits",
+    "price": 5.00,
+    "unit": "pack",
+    "image": "assets/images/products/dry-fruits/peanuts.png",
+    "rating": 4.5,
+    "inStock": true
+  },
+  {
+    "id": 31,
+    "name": "Pistachios",
+    "category": "dry-fruits",
+    "price": 13.00,
+    "unit": "200g",
+    "image": "assets/images/products/dry-fruits/pistachios.png",
+    "rating": 5.0,
+    "inStock": true
+  },
+  {
+    "id": 32,
+    "name": "Raisins",
+    "category": "dry-fruits",
+    "price": 6.00,
+    "unit": "200g",
+    "image": "assets/images/products/dry-fruits/raisins.png",
+    "rating": 4.6,
+    "inStock": true
+  },
+  {
+    "id": 33,
+    "name": "Walnuts",
+    "category": "dry-fruits",
+    "price": 12.50,
+    "unit": "200g",
+    "image": "assets/images/products/dry-fruits/walnuts.png",
+    "rating": 4.8,
+    "inStock": true
+  },
+  {
+    "id": 34,
+    "name": "Almond Milk",
+    "category": "milk-eggs",
+    "price": 4.50,
+    "unit": "liter",
+    "image": "assets/images/products/milk&egg/almond-milk.png",
+    "rating": 4.7,
+    "inStock": true
+  },
+  {
+    "id": 35,
+    "name": "Butter",
+    "category": "milk-eggs",
+    "price": 3.00,
+    "unit": "bar",
+    "image": "assets/images/products/milk&egg/butter.png",
+    "rating": 4.5,
+    "inStock": true
+  },
+  {
+    "id": 36,
+    "name": "Cheese",
+    "category": "milk-eggs",
+    "price": 5.00,
+    "unit": "pack",
+    "image": "assets/images/products/milk&egg/cheese.png",
+    "rating": 4.6,
+    "inStock": true
+  },
+  {
+    "id": 37,
+    "name": "Eggs",
+    "category": "milk-eggs",
+    "price": 4.00,
+    "unit": "dozen",
+    "image": "assets/images/products/milk&egg/egg.png",
+    "rating": 4.5,
+    "inStock": true
+  },
+  {
+    "id": 38,
+    "name": "Ferrero Rocher",
+    "category": "milk-eggs",
+    "price": 8.00,
+    "unit": "box",
+    "image": "assets/images/products/milk&egg/ferro-rocher.png",
+    "rating": 5.0,
+    "inStock": true
+  },
+  {
+    "id": 39,
+    "name": "Ghee",
+    "category": "milk-eggs",
+    "price": 10.00,
+    "unit": "jar",
+    "image": "assets/images/products/milk&egg/ghee.png",
+    "rating": 4.8,
+    "inStock": true
+  },
+  {
+    "id": 40,
+    "name": "Ice Cream",
+    "category": "milk-eggs",
+    "price": 6.00,
+    "unit": "tub",
+    "image": "assets/images/products/milk&egg/icecream.png",
+    "rating": 4.9,
+    "inStock": true
+  },
+  {
+    "id": 41,
+    "name": "Paneer",
+    "category": "milk-eggs",
+    "price": 4.50,
+    "unit": "pack",
+    "image": "assets/images/products/milk&egg/paneer.png",
+    "rating": 4.7,
+    "inStock": true
+  },
+  {
+    "id": 42,
+    "name": "Body Wash",
+    "category": "household",
+    "price": 5.50,
+    "unit": "bottle",
+    "image": "assets/images/products/household/bodywash.png",
+    "rating": 4.4,
+    "inStock": true
+  },
+  {
+    "id": 43,
+    "name": "Cleaning Spray",
+    "category": "household",
+    "price": 3.80,
+    "unit": "bottle",
+    "image": "assets/images/products/household/cleaning-spray.png",
+    "rating": 4.3,
+    "inStock": true
+  },
+  {
+    "id": 44,
+    "name": "Hand Wash",
+    "category": "household",
+    "price": 2.50,
+    "unit": "bottle",
+    "image": "assets/images/products/household/handwash.png",
+    "rating": 4.5,
+    "inStock": true
+  },
+  {
+    "id": 45,
+    "name": "Laundry Detergent",
+    "category": "household",
+    "price": 8.00,
+    "unit": "bottle",
+    "image": "assets/images/products/household/laundry-detergent.png",
+    "rating": 4.6,
+    "inStock": true
+  },
+  {
+    "id": 46,
+    "name": "Shampoo",
+    "category": "household",
+    "price": 6.00,
+    "unit": "bottle",
+    "image": "assets/images/products/household/shampoo.png",
+    "rating": 4.5,
+    "inStock": true
+  },
+  {
+    "id": 47,
+    "name": "Soap",
+    "category": "household",
+    "price": 1.20,
+    "unit": "bar",
+    "image": "assets/images/products/household/soap.png",
+    "rating": 4.2,
+    "inStock": true
+  },
+  {
+    "id": 48,
+    "name": "Tissue Paper",
+    "category": "household",
+    "price": 2.00,
+    "unit": "pack",
+    "image": "assets/images/products/household/tissue-paper.png",
+    "rating": 4.4,
+    "inStock": true
+  }
+]
