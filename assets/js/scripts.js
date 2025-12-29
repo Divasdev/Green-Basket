@@ -323,104 +323,37 @@ function initTestimonials() {
   }
 }
 
+
+
+
 /* =========================================
-   7. RATING POPUP LOGIC
+   7. Dynamic Product Render LOGIC
    ========================================= */
-function initRatingPopup() {
-  const modal = document.getElementById("ratingModal");
-  if (!modal) return;
 
-  const closeBtn = modal.querySelector(".close-rating");
-  const stars = modal.querySelectorAll(".star");
-  const submitBtn = document.getElementById("submitRating");
-  const messageEl = document.getElementById("ratingMessage");
-  let currentRating = 0;
 
-  // Show modal every 10 seconds (recurrence)
-  setInterval(() => {
-    // Only show if not currently open to avoid stacking or weirdness
-    if (!modal.classList.contains("show")) {
-      modal.classList.add("show");
-      modal.setAttribute("aria-hidden", "false");
+ async function renderProduct(){
+   const grid = document.getElementById("productGrid")
+   if(!grid) return
+   
+   try{
+     const response = await fetch("assets/data/products.json")
+     const products = await response.json()
+      
+     if (!response.ok){
+      throw new Error(`HTTP error! Status :${response.status}`)
+     }
+     console.log(products);
+      
+    } catch (error){
+      console.log("products not fetched", error)
     }
-  }, 10000);
+ 
+  }   
 
-  // Close functionality
-  function closeModal() {
-    modal.classList.remove("show");
-    modal.setAttribute("aria-hidden", "true");
-  }
+  renderProduct()
 
-  closeBtn.addEventListener("click", closeModal);
 
-  // Close on outside click
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) closeModal();
-  });
 
-  // Star Rating Logic
-  stars.forEach(star => {
-    star.addEventListener("click", () => {
-      const value = parseInt(star.getAttribute("data-value"));
-      currentRating = value;
 
-      // Update visual state
-      stars.forEach(s => {
-        const sValue = parseInt(s.getAttribute("data-value"));
-        if (sValue <= value) {
-          s.classList.add("active");
-        } else {
-          s.classList.remove("active");
-        }
-      });
 
-      // Enable submit
-      submitBtn.disabled = false;
-      messageEl.textContent = "You selected " + value + " star" + (value > 1 ? "s" : "");
-    });
-  });
 
-  // Submit Logic
-  submitBtn.addEventListener("click", () => {
-    submitBtn.textContent = "Sending...";
-    submitBtn.disabled = true;
-
-    // --- EMAILJS CONFIGURATION ---
-    const serviceID = "YOUR_SERVICE_ID";
-    const templateID = "YOUR_TEMPLATE_ID";
-    const publicKey = "YOUR_PUBLIC_KEY";
-
-    // Initialize EmailJS
-    if (typeof emailjs !== "undefined") {
-      emailjs.init(publicKey);
-    }
-
-    const templateParams = {
-      rating: currentRating,
-      message: "User submitted a rating from the website."
-    };
-
-    if (serviceID === "YOUR_SERVICE_ID") {
-      // Development mode fallback
-      console.log("EmailJS keys not set. Dev mode active.");
-      setTimeout(() => {
-        modal.innerHTML = '<div class="rating-content"><h3>Thank You!</h3><p>We appreciate your feedback.</p></div>';
-        setTimeout(closeModal, 2000);
-      }, 1000);
-      return;
-    }
-
-    // Send Email
-    emailjs.send(serviceID, templateID, templateParams)
-      .then(() => {
-        modal.innerHTML = '<div class="rating-content"><h3>Thank You!</h3><p>Rating sent successfully!</p></div>';
-        setTimeout(closeModal, 2000);
-      })
-      .catch((err) => {
-        console.error("EmailJS Error:", err);
-        submitBtn.textContent = "Error";
-        messageEl.textContent = "Failed to send. Check console.";
-        submitBtn.disabled = false;
-      });
-  });
-}
