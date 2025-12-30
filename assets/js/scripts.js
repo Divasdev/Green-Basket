@@ -10,9 +10,7 @@ const wishlistButtons = document.querySelectorAll(".wishlist-btn");
 const searchInput = document.querySelector(".search-input");
 const recentDropdown = document.querySelector(".recent-list");
 
-/* =========================================
-   1. COUNTDOWN TIMER LOGIC
-   ========================================= */
+
 function initTimer() {
   if (!futureDateElement) return; // Guard clause if timer not on page
 
@@ -46,9 +44,7 @@ function initTimer() {
   const interval = setInterval(updateTimer, 1000);
 }
 
-/* =========================================
-   2. CART LOGIC (LocalStorage)
-   ========================================= */
+
 function initCart() {
   // Update badge on load
   updateCartBadge();
@@ -99,9 +95,8 @@ function updateCartBadge() {
   cartBadge.textContent = cart.length;
 }
 
-/* =========================================
-   3. WISHLIST TOGGLE LOGIC
-   ========================================= */
+
+
 function initWishlist() {
   // Load saved wishlist state
   const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
@@ -147,9 +142,7 @@ function initWishlist() {
   });
 }
 
-/* =========================================
-   4. SEARCH REDIRECTION
-   ========================================= */
+
 function initSearch() {
   if (!searchInput) return;
 
@@ -166,9 +159,7 @@ function initSearch() {
   });
 }
 
-/* =========================================
-   5. RECENTLY VIEWED LOGIC
-   ========================================= */
+
 function initRecentlyViewed() {
   renderRecentlyViewed();
 
@@ -226,9 +217,7 @@ function renderRecentlyViewed() {
   `).join("");
 }
 
-/* =========================================
-   HELPER FUNCTIONS
-   ========================================= */
+
 function addToLocalStorage(key, data) {
   const current = JSON.parse(localStorage.getItem(key)) || [];
   current.push(data);
@@ -264,9 +253,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-/* =========================================
-   6. TESTIMONIALS AUTO-PLAY
-   ========================================= */
+
 function initTestimonials() {
   const avatars = document.querySelectorAll(".avatar-img");
   const testimonials = [
@@ -326,31 +313,143 @@ function initTestimonials() {
 
 
 
-/* =========================================
-   7. Dynamic Product Render LOGIC
-   ========================================= */
 
 
- async function renderProduct(){
-   const grid = document.getElementById("productGrid")
-   if(!grid) return
-   
-   try{
-     const response = await fetch("assets/data/products.json")
-     const products = await response.json()
-      
-     if (!response.ok){
-      throw new Error(`HTTP error! Status :${response.status}`)
-     }
-     console.log(products);
-      
-    } catch (error){
-      console.log("products not fetched", error)
-    }
- 
-  }   
 
-  renderProduct()
+
+let globalProducts = [];
+
+async function loadProducts() {
+  const grid = document.getElementById("productGrid");
+  if (!grid) return;
+
+  try {
+
+    const response = await fetch("assets/data/products.json");
+    const products = await response.json();
+
+
+    // grid.innerHTML = products.map(product => `
+    //   <div class="product-card" data-category="${product.category}">
+    //     <div class="badge">Sale</div>
+    //     <div class="product-tumb">
+    //       <img src="${product.image}" alt="${product.name}">
+    //     </div>
+    //     <div class="product-details"> 
+    //       <span class="product-catagory">${product.category}</span>
+    //       <h4><a href="">${product.name}</a></h4>
+    //       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    //       <div class="product-bottom-details">
+    //         <div class="product-price">$${product.price} / ${product.unit}</div>
+    //         <div class="product-links">
+    //           <a href=""><i class="fa fa-heart"></i></a>
+    //           <a href=""><i class="fa fa-shopping-cart"></i></a>
+    //         </div>
+    //       </div>
+    //     </div>
+    //   </div>
+
+    // `).join("")
+
+    const bestSeller = products.filter(product =>
+      product.isBestSeller
+    );
+
+    grid.innerHTML = bestSeller.map(product => `
+       <article class="product-card" aria-label="${product.name}-${product.unit}">
+  
+  <figure class="product-media">
+    <img 
+      src="${product.image}" 
+      alt="${product.name}-${product.unit}" 
+      class="product-image"
+    >
+  </figure>
+
+  <div class="product-toprow">
+    <span class="product-badge">
+      ${product.isBestSeller ? "Best Seller" : "Sale"}
+    </span>
+
+    <button 
+      class="wishlist-btn" 
+      type="button" 
+      aria-pressed="false"
+      aria-label="Add to wishlist"
+    >
+      <img 
+        src="assets/images/HubSpot Brand Kit/Logo/SVG/e-commerce.png"
+        class="wishlisticon-productscard"
+        alt="wishlist icon"
+      >
+    </button>
+  </div>
+
+  <div class="product-body">
+
+    <div class="fruits-rating">
+      <p class="product-type">${product.category}</p>
+      <span class="product-rating">⭐️ ${product.rating}</span>
+    </div>
+
+    <h3 class="product-name">${product.name}</h3>
+    <p class="product-quantity">${product.unit}</p>
+
+    <div class="product-price-wrap">
+      <strong class="product-price">
+        $${product.price}
+      </strong>
+
+      ${product.oldPrice
+        ? `<span class="product-oldprice">$${product.oldPrice}</span>`
+        : ""
+      }
+
+      <button 
+        class="product-addtocart" 
+        type="button"
+        aria-label="Add ${product.name} to cart"
+      >
+        <img 
+          src="assets/images/HubSpot Brand Kit/Logo/SVG/shopping-bag.png"
+          class="carticon"
+          alt="cart icon"
+        >
+        <span class="product-add">Add</span>
+      </button>
+    </div>
+
+  </div>
+</article>
+
+        `).join("")
+
+
+
+
+
+  } catch (error) {
+    console.error("Error loading products:", error);
+    grid.innerHTML = "<p>Failed to load products. Please try again.</p>";
+  }
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  loadProducts();
+});
+
+
+
+
+
+
+
+
+
+
+
 
 
 

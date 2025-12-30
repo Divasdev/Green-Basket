@@ -1,4 +1,5 @@
 @import "rating.css";
+
 /* ===== BASE STYLES ===== */
 html {
   scroll-behavior: smooth;
@@ -9,7 +10,7 @@ h2,
 h3,
 .heading,
 .btn {
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 body,
@@ -17,12 +18,11 @@ nav,
 .small-text,
 .labels,
 input,
-button,
 select,
 textarea {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
-  width: 100%;
+
   overflow-x: hidden;
   /* Prevent horizontal scroll globally */
 }
@@ -1612,7 +1612,7 @@ header {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 8px 22px rgba(16, 24, 32, 0.06);
-  overflow: visible;
+  overflow: hidden;
   padding: 14px;
   box-sizing: border-box;
   display: flex;
@@ -1686,6 +1686,13 @@ header {
   transform: scale(1.1);
 }
 
+.wishlisticon-productscard {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
+}
+
 .wishlist-btn.active .wishlisticon-productscard {
   /* Turn icon red */
   filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
@@ -1696,7 +1703,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  width: 30;
+  width: 100%;
 }
 
 /* small meta row: category + rating */
@@ -2890,3 +2897,4 @@ header {
   animation: fadeInUp 0.8s ease-out forwards;
   opacity: 0;
   /* Start hidden */
+}

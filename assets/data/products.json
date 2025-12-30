@@ -7,6 +7,8 @@
     "unit": "kg",
     "image": "assets/images/products/fruits/apple.png",
     "rating": 5,
+    "type": "best-seller",
+    "isBestSeller": true,
     "inStock": true
   },
   {
@@ -17,6 +19,8 @@
     "unit": "dozen",
     "image": "assets/images/products/fruits/banana.png",
     "rating": 4.5,
+    "type": "best-seller",
+    "isBestSeller": true,
     "inStock": true
   },
   {
@@ -27,6 +31,7 @@
     "unit": "kg",
     "image": "assets/images/products/fruits/grapes.png",
     "rating": 4.0,
+    "isBestSeller": false,
     "inStock": true
   },
   {
@@ -37,6 +42,8 @@
     "unit": "piece",
     "image": "assets/images/products/fruits/lemon.png",
     "rating": 4.5,
+    "type": "best-seller",
+    "isBestSeller": true,
     "inStock": true
   },
   {
@@ -47,6 +54,7 @@
     "unit": "kg",
     "image": "assets/images/products/fruits/mango.png",
     "rating": 5.0,
+    "isBestSeller": false,
     "inStock": true
   },
   {
@@ -57,6 +65,7 @@
     "unit": "kg",
     "image": "assets/images/products/fruits/orange.png",
     "rating": 4.2,
+    "isBestSeller": false,
     "inStock": true
   },
   {
@@ -67,6 +76,7 @@
     "unit": "kg",
     "image": "assets/images/products/fruits/promegranate.png",
     "rating": 4.6,
+    "isBestSeller": false,
     "inStock": true
   },
   {
@@ -77,6 +87,7 @@
     "unit": "box",
     "image": "assets/images/products/fruits/strawberry.png",
     "rating": 4.8,
+    "isBestSeller": false,
     "inStock": true
   },
   {
@@ -87,6 +98,7 @@
     "unit": "piece",
     "image": "assets/images/products/fruits/watermelon.png",
     "rating": 4.3,
+    "isBestSeller": false,
     "inStock": true
   },
   {
@@ -97,6 +109,8 @@
     "unit": "piece",
     "image": "assets/images/products/vegetables/brocolli.png",
     "rating": 4.5,
+    "type": "best-seller",
+    "isBestSeller": true,
     "inStock": true
   },
   {
@@ -107,6 +121,7 @@
     "unit": "kg",
     "image": "assets/images/products/vegetables/capsicum.png",
     "rating": 4.0,
+    "isBestSeller": false,
     "inStock": true
   },
   {
@@ -117,6 +132,8 @@
     "unit": "kg",
     "image": "assets/images/products/vegetables/carrot.png",
     "rating": 4.2,
+    "type": "best-seller",
+    "isBestSeller": true,
     "inStock": true
   },
   {
@@ -127,6 +144,7 @@
     "unit": "piece",
     "image": "assets/images/products/vegetables/cauliflower.png",
     "rating": 4.1,
+    "isBestSeller": false,
     "inStock": true
   },
   {
@@ -137,6 +155,7 @@
     "unit": "kg",
     "image": "assets/images/products/vegetables/onion.png",
     "rating": 4.0,
+    "isBestSeller": false,
     "inStock": true
   },
   {
@@ -147,6 +166,7 @@
     "unit": "kg",
     "image": "assets/images/products/vegetables/potato.avif",
     "rating": 4.2,
+    "isBestSeller": false,
     "inStock": true
   },
   {
@@ -157,6 +177,8 @@
     "unit": "bunch",
     "image": "assets/images/products/vegetables/spinach.png",
     "rating": 4.5,
+    "type": "best-seller",
+    "isBestSeller": true,
     "inStock": true
   },
   {
@@ -167,6 +189,7 @@
     "unit": "kg",
     "image": "assets/images/products/vegetables/tomato.avif",
     "rating": 4.3,
+    "isBestSeller": false,
     "inStock": true
   },
   {
@@ -177,6 +200,7 @@
     "unit": "piece",
     "image": "assets/images/products/bakery/bagel.png",
     "rating": 4.0,
+    "isBestSeller": false,
     "inStock": true
   },
   {
@@ -187,6 +211,8 @@
     "unit": "pack",
     "image": "assets/images/products/bakery/bread.png",
     "rating": 4.5,
+    "type": "best-seller",
+    "isBestSeller": true,
     "inStock": true
   },
   {
@@ -197,6 +223,8 @@
     "unit": "piece",
     "image": "assets/images/products/bakery/cake.png",
     "rating": 4.8,
+    "type": "best-seller",
+    "isBestSeller": true,
     "inStock": true
   },
   {
@@ -207,6 +235,7 @@
     "unit": "box",
     "image": "assets/images/products/bakery/cookies.png",
     "rating": 4.6,
+    "isBestSeller": false,
     "inStock": true
   },
   {
@@ -217,6 +246,8 @@
     "unit": "piece",
     "image": "assets/images/products/bakery/crossinant.png",
     "rating": 4.7,
+    "type": "best-seller",
+    "isBestSeller": true,
     "inStock": true
   },
   {
@@ -227,6 +258,7 @@
     "unit": "piece",
     "image": "assets/images/products/bakery/donut.png",
     "rating": 4.3,
+    "isBestSeller": false,
     "inStock": true
   },
   {
@@ -237,6 +269,7 @@
     "unit": "pack",
     "image": "assets/images/products/bakery/garlic-bread.png",
     "rating": 4.5,
+    "isBestSeller": false,
     "inStock": true
   },
   {
@@ -247,6 +280,7 @@
     "unit": "piece",
     "image": "assets/images/products/bakery/muffin.png",
     "rating": 4.2,
+    "isBestSeller": false,
     "inStock": true
   },
   {
@@ -257,6 +291,8 @@
     "unit": "200g",
     "image": "assets/images/products/dry-fruits/almonds.png",
     "rating": 5.0,
+    "type": "best-seller",
+    "isBestSeller": true,
     "inStock": true
   },
   {
@@ -267,6 +303,8 @@
     "unit": "200g",
     "image": "assets/images/products/dry-fruits/cashew.png",
     "rating": 4.8,
+    "type": "best-seller",
+    "isBestSeller": true,
     "inStock": true
   },
   {
@@ -277,6 +315,7 @@
     "unit": "box",
     "image": "assets/images/products/dry-fruits/dates.png",
     "rating": 4.7,
+    "isBestSeller": false,
     "inStock": true
   },
   {
@@ -287,6 +326,8 @@
     "unit": "pack",
     "image": "assets/images/products/dry-fruits/mixed-nuts.png",
     "rating": 4.9,
+    "type": "best-seller",
+    "isBestSeller": true,
     "inStock": true
   },
   {
@@ -297,6 +338,7 @@
     "unit": "pack",
     "image": "assets/images/products/dry-fruits/peanuts.png",
     "rating": 4.5,
+    "isBestSeller": false,
     "inStock": true
   },
   {
@@ -307,6 +349,7 @@
     "unit": "200g",
     "image": "assets/images/products/dry-fruits/pistachios.png",
     "rating": 5.0,
+    "isBestSeller": false,
     "inStock": true
   },
   {
@@ -317,6 +360,7 @@
     "unit": "200g",
     "image": "assets/images/products/dry-fruits/raisins.png",
     "rating": 4.6,
+    "isBestSeller": false,
     "inStock": true
   },
   {
@@ -327,6 +371,7 @@
     "unit": "200g",
     "image": "assets/images/products/dry-fruits/walnuts.png",
     "rating": 4.8,
+    "isBestSeller": false,
     "inStock": true
   },
   {
@@ -337,6 +382,8 @@
     "unit": "liter",
     "image": "assets/images/products/milk&egg/almond-milk.png",
     "rating": 4.7,
+    "type": "best-seller",
+    "isBestSeller": true,
     "inStock": true
   },
   {
@@ -347,6 +394,7 @@
     "unit": "bar",
     "image": "assets/images/products/milk&egg/butter.png",
     "rating": 4.5,
+    "isBestSeller": false,
     "inStock": true
   },
   {
@@ -357,6 +405,7 @@
     "unit": "pack",
     "image": "assets/images/products/milk&egg/cheese.png",
     "rating": 4.6,
+    "isBestSeller": false,
     "inStock": true
   },
   {
@@ -367,6 +416,7 @@
     "unit": "dozen",
     "image": "assets/images/products/milk&egg/egg.png",
     "rating": 4.5,
+    "isBestSeller": false,
     "inStock": true
   },
   {
@@ -377,6 +427,8 @@
     "unit": "box",
     "image": "assets/images/products/milk&egg/ferro-rocher.png",
     "rating": 5.0,
+    "type": "best-seller",
+    "isBestSeller": true,
     "inStock": true
   },
   {
@@ -387,6 +439,7 @@
     "unit": "jar",
     "image": "assets/images/products/milk&egg/ghee.png",
     "rating": 4.8,
+    "isBestSeller": false,
     "inStock": true
   },
   {
@@ -397,6 +450,8 @@
     "unit": "tub",
     "image": "assets/images/products/milk&egg/icecream.png",
     "rating": 4.9,
+    "type": "best-seller",
+    "isBestSeller": true,
     "inStock": true
   },
   {
@@ -407,6 +462,7 @@
     "unit": "pack",
     "image": "assets/images/products/milk&egg/paneer.png",
     "rating": 4.7,
+    "isBestSeller": false,
     "inStock": true
   },
   {
@@ -417,6 +473,8 @@
     "unit": "bottle",
     "image": "assets/images/products/household/bodywash.png",
     "rating": 4.4,
+    "type": "best-seller",
+    "isBestSeller": true,
     "inStock": true
   },
   {
@@ -427,6 +485,7 @@
     "unit": "bottle",
     "image": "assets/images/products/household/cleaning-spray.png",
     "rating": 4.3,
+    "isBestSeller": false,
     "inStock": true
   },
   {
@@ -437,6 +496,8 @@
     "unit": "bottle",
     "image": "assets/images/products/household/handwash.png",
     "rating": 4.5,
+    "type": "best-seller",
+    "isBestSeller": true,
     "inStock": true
   },
   {
@@ -447,6 +508,8 @@
     "unit": "bottle",
     "image": "assets/images/products/household/laundry-detergent.png",
     "rating": 4.6,
+    "type": "best-seller",
+    "isBestSeller": true,
     "inStock": true
   },
   {
@@ -457,6 +520,7 @@
     "unit": "bottle",
     "image": "assets/images/products/household/shampoo.png",
     "rating": 4.5,
+    "isBestSeller": false,
     "inStock": true
   },
   {
@@ -467,6 +531,7 @@
     "unit": "bar",
     "image": "assets/images/products/household/soap.png",
     "rating": 4.2,
+    "isBestSeller": false,
     "inStock": true
   },
   {
@@ -477,6 +542,7 @@
     "unit": "pack",
     "image": "assets/images/products/household/tissue-paper.png",
     "rating": 4.4,
+    "isBestSeller": false,
     "inStock": true
   }
 ]
